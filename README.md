@@ -43,6 +43,7 @@ The Table of Contents below will help jump you to the pertinent section of this 
   - [CSS and JavaScript](#css-and-javascript)
   - [Linting](#scss-linting)
 - [Javascript](#javascript)
+- [Git](#git)
 - [Images](#images)
 - [Editor Config](#editor-config)
 - [Sources](#sources)
@@ -382,10 +383,6 @@ There is no penalty to splitting into many small files. It’s much easier to ju
 #### Compile with Source Maps
 
 Source Maps are produced as part of our Gulp build to more easily determine where particular SCSS partial rules are coming from to aid in visual debugging within the browser.
-
-<a name="javascript"></a>
-
-### Javascript
 
 <a name="rule-structure"></a>
 
@@ -1068,6 +1065,14 @@ a {
   border: 0; // Failing result reported
 }
 ```
+
+<a name="javascript"></a>
+
+### Javascript
+
+<a name="git"></a>
+
+### Git
 
 <a name="images"></a>
 
