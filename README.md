@@ -28,7 +28,6 @@ The Table of Contents below will help jump you to the pertinent section of this 
   - [Attribute Order](#attribute-order)
   - [Boolean Attributes](#boolean-attributes)
   - [JavaScript-Generated Markup](#javascript-generated-markup)
-  - [HTML Comments](#html-comments)
   - [Accessibility](#accessibility)
   - [Performance](#performance)
 - [CSS/SCSS](#css-scss)
@@ -41,8 +40,17 @@ The Table of Contents below will help jump you to the pertinent section of this 
   - [Class Naming Conventions](#class-naming-conventions)
   - [Block Element Modifier (BEM)](#block-element-modifier-bem)
   - [CSS and JavaScript](#css-and-javascript)
+  - [CSS Frameworks](#css-frameworks)
   - [Linting](#scss-linting)
 - [Javascript](#javascript)
+  - [File Naming and Organization](#javascript-file-naming-and-organization)
+  - [Comments](#javascript-comments)
+  - [Modular Programming](#modular-programming)
+  - [Writing Tests](#writing-tests)
+  - [Javascript Naming Conventions](#javascript-naming-conventions)
+  - [Javascript Frameworks](#javascript-frameworks)
+    - [React](#react)
+    - [React Native](#react-native)
 - [Git](#git)
 - [Images](#images)
 - [Editor Config](#editor-config)
@@ -82,7 +90,7 @@ _Our [.editorconfig](#editor-config) file helps with maintaining proper whitespa
 
 ### Comments
 
-Well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don't leave others in the team guessing as to the purpose of uncommon or non-obvious code.
+Your code should be easily readable and self-explanatory, thus removing the need for comments. **Avoid it whenever possible.**
 
 <a name="html"></a>
 
@@ -280,17 +288,6 @@ The [W3C Spec for Boolean Attributes](https://www.w3.org/TR/html5/infrastructure
 
 Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. **Avoid it whenever possible.**
 
-<a name="html-comments"></a>
-
-### Comments
-
-Insert an ending comment after the closing tag of a long HTML section. This helps to identify what named element is being closed. **DO NOT use a starting comment.**
-
-```html
-<div class="my-class">...</div>
-<!-- /.my-class -->
-```
-
 <a name="accessibility"></a>
 
 ### Accessibility (a11y)
@@ -345,39 +342,47 @@ Filenames should contain lowercase letters and words should be separated with a 
 
 The top-level SCSS should serve as a “Table of Contents” with no styles directly within it. Keep all styles organized into component parts. When ordering your partials within your “Table of Contents”, the ideal order/grouping is:
 
-- Global
-- Vendor
-- Elements
-- Components
-- Sections
-- Pages
+- base (contains global styles, such as resets, typography, variables, etc)
+- components (contains each self-contained component in its own .scss partial)
+- layout (contains styling for larger layout components; e.g. nav, header, footer, etc.)
+- pages (contains page-specific styling, if necessary)
+- themes (contains styling for different themes)
+- helpers (contains global mixins, functions, helper selectors, etc.)
+- vendors (contains 3rd-party styles, mixins, etc.)
+- main.scss (output file that brings together all of the above parts)
 
-Partials are named `_partial-name.scss` - with a "\_" prefix - to indicate that this file isn't meant to be compiled by itself. Break CSS/SCSS down by component instead of page. Pages can be rearranged and components (re)moved.
+Partials are named `_partial-name.scss` - with a "\_" prefix - to indicate that this file isn't meant to be compiled by itself.
+Each folder should have a single .scss partial file that collects the other files in the same directory - such as \_module.scss (my preference) or \_glob.scss
 
 There is no penalty to splitting into many small files. It’s much easier to jump to small specific files and navigate through them than fewer/larger ones.
 
 ```css
-// global
-@import "global/functions";
-@import "global/variables";
-
-// vendor
-@import "vendor/bootstrap/bootstrap";
-
-// elements
-@import "partial/grid";
-@import "partial/utility";
+// base
+@import "base/resets";
+@import "base/typography";
 
 // components
-@import "partial/modals";
-@import "partial/tabs";
+@import "components/button";
+@import "components/tabs";
 
-// sections
-@import "partial/global-footer";
-@import "partial/global-header";
+// layout
+@import "layout/header";
+@import "layout/footer";
 
 // pages
-@import "partial/contact-page";
+@import "pages/home";
+@import "pages/contact";
+
+// themes
+@import "themes/default";
+@import "themes/dark-mode";
+
+// helpers
+@import "helpers/functions";
+@import "helpers/mixins";
+
+// vendors
+@import "vendors/bootstrap/bootstrap";
 ```
 
 #### Compile with Source Maps
@@ -1069,6 +1074,52 @@ a {
 <a name="javascript"></a>
 
 ### Javascript
+
+<a name="javascript-file-naming-and-organization"></a>
+
+### File Naming and Organization
+
+Filenames should contain lowercase letters and words should be separated with a hyphen.
+
+- Within individual javascript files, organize sections of code by component element.
+- Use consistent white space to your advantage when separating sections of code for scanning larger documents.
+
+<a name="javascript-comments"></a>
+
+### Comments
+
+Your code should be easily readable and self-explanatory, thus removing the need for comments. **Avoid it whenever possible.**
+
+Although use of comments should be avoided but comments can be used for reminders or to pass really important information.
+If its necessary to use comments you can use the approach in the example below.
+
+```Javascript
+// TODO: Change data source when the apis have been integrated
+```
+
+<a name="modular-programming"></a>
+
+### Modular Programming
+
+<a name="writing-tests"></a>
+
+### Writing Tests
+
+<a name="javascript-naming-conventions"></a>
+
+### Javascript Naming Conventions
+
+<a name="javascript-frameworks"></a>
+
+### Javascript Frameworks
+
+<a name="react"></a>
+
+### React
+
+<a name="react-native"></a>
+
+### React Native
 
 <a name="git"></a>
 
