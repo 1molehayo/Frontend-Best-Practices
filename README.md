@@ -6,7 +6,7 @@ The following document outlines a reasonable style guide for CSS and JavaScript 
 
 This is a document of Best Practices and Code Standards for Front-End Development at Summitech. The Development Team is encouraged to test, discuss, and evolve what is documented here together as best practices change and new ideas are shared. **Please implement and enforce these agreed upon standards in your own builds and in code reviews at all times for all projects.**
 
-Well-formed markup is made up of part standards and part agreed upon preferences by the development team. Along with consistency, both are important in creating maintainable, readable code for everybody.
+> Well-formed markup is made up of part standards and part agreed upon preferences by the development team. Along with consistency, both are important in creating maintainable, readable code for everybody.
 
 **An [.editorconfig](#editor-config) file is included with this documentation to aid in enforcing some of these standards.** A full breakdown of the current `.editorconfig` is provided later in this document.
 
