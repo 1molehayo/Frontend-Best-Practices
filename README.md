@@ -386,6 +386,8 @@ There is no penalty to splitting into many small files. It’s much easier to ju
 @import "vendors/bootstrap/bootstrap";
 ```
 
+Learn more about [SCSS Naming and Organization](https://scotch.io/tutorials/aesthetic-sass-1-architecture-and-style-organization)
+
 #### Compile with Source Maps
 
 Source Maps are produced as part of our Gulp build to more easily determine where particular SCSS partial rules are coming from to aid in visual debugging within the browser.
