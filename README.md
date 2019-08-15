@@ -1073,7 +1073,7 @@ a {
 
 <a name="javascript"></a>
 
-### Javascript
+## Javascript
 
 <a name="javascript-file-naming-and-organization"></a>
 
