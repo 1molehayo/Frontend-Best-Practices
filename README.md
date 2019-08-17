@@ -1257,7 +1257,7 @@ var direction = (x > 100) ? 1 : -1;
 
 #### 5. Modularize
 
-**Keep your code modularized and specialized.**
+> Keep your code modularized and specialized.
 
 It is tempting and easy to write one function that does everything. However, as you extend the functionality you will find that you do the same things in several functions.
 
@@ -1333,7 +1333,7 @@ Most of the time you’ll find the extra functionality you need is because of ba
 
 #### 8. Don’t Trust Any Data
 
-**Good code does not trust any data that comes in.**
+> Good code does not trust any data that comes in.
 
 - Don’t believe the HTML document, any user can meddle with it for example in Firebug.
 - Don’t trust that data reaches your function is of the right format. Test with typeof and then do something with it.
