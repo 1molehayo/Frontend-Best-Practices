@@ -40,18 +40,18 @@ The Table of Contents below will help jump you to the pertinent section of this 
   - [Class Naming Conventions](#class-naming-conventions)
   - [Block Element Modifier (BEM)](#block-element-modifier-bem)
   - [CSS and JavaScript](#css-and-javascript)
-  - [Responsive Designs](#responsive-designs)
   - [CSS Frameworks](#css-frameworks)
+  - [Responsive Designs](#responsive-designs)
   - [Linting](#scss-linting)
 - [Javascript](#javascript)
   - [File Naming and Organization](#javascript-file-naming-and-organization)
   - [Comments](#javascript-comments)
-  - [Modular Programming](#modular-programming)
+  - [Javascript Best Practices](#javascript-best-practices)
   - [Writing Tests](#writing-tests)
-  - [Javascript Naming Conventions](#javascript-naming-conventions)
   - [Javascript Frameworks](#javascript-frameworks)
     - [React](#react)
     - [React Native](#react-native)
+  - [Linting](#javascript-linting)
 - [Git](#git)
 - [Images](#images)
 - [Editor Config](#editor-config)
@@ -1074,9 +1074,43 @@ a {
 }
 ```
 
+<a name="css-frameworks">
+
+## CSS Frameworks
+
+Summitech uses bootstrap as their standard for frontend styles in all project.
+
+<a name="responsive-designs">
+
+## Responsive Designs
+
+**All web designs should be responsive**. This means to adapt a website’s layout for multiple screen resolutions (i.e desktops, tablets and mobile phones).
+
+In summitech we believe in the [mobile first approach](#http://bradfrost.com/blog/post/mobile-first-responsive-web-design/).
+
+Mobile-First Responsive Web Design is a combination of philosophies/strategies, and ultimately boils down to a broader application of good ol’ web best practices. As the digital landscape gets increasingly complex, we need to design experiences that work across the entire spectrum of digital devices.
+
+Mobile First simply highlights the need to prioritize the mobile context when creating user experiences. Starting with mobile first:
+
+- Allows websites to reach more people (77% of the world’s population has a mobile device, 85% of phones sold in 2011 equipped with browser)
+- Forces designers to focus on core content and functionality (What do you do when you lose 80% of your screen real estate?)
+- Lets designers innovate and take advantage of new technologies (geolocation, touch events and more)
+
+Creating a responsive web design utilizes:
+
+- Fluid grids that ebb and flow with a devices’ screen size
+- Flexible images and media that keep content intact on any resolution
+- Media queries allowing designs to adapt by establishing dimension breakpoints
+
+You can find more information in [Brad Frost - Mobile First Responsive Web Design](#http://bradfrost.com/blog/post/mobile-first-responsive-web-design/)
+
 <a name="javascript"></a>
 
 ## Javascript
+
+Representing the Logic layer of our Front-End Development, it’s important that our Javascript logic is well organized and documented, in alignment with the world standard best practices today.
+
+**A [.eslintrc](#javascript-linting) file is included with this documentation to aid in enforcing some of these standards.** A full breakdown of the current `.eslintrc` is provided later in this document.
 
 <a name="javascript-file-naming-and-organization"></a>
 
@@ -1100,29 +1134,418 @@ If its necessary to use comments you can use the approach in the example below.
 // TODO: Change data source when the apis have been integrated
 ```
 
-<a name="modular-programming"></a>
+<a name="javascript-best-practices"></a>
 
-### Modular Programming
+### Javascript Best Practices
+
+#### 1. Make Variable Names Understandable
+
+Choose easy to understand and short names for variables and functions.
+Your code is a story - make your storyline easy to follow!
+
+**Example of bad names**
+
+```Javascript
+// bad variable names
+var x1, fe2, xbqne;
+
+function incrementerForMainLoopWhichSpansFromTenToTwenty() {
+}
+
+function createNewMemberIfAgeOverTwentyOneAndMoonIsFull() {
+}
+```
+
+**Avoid describing a value with your variable or function name.**
+
+```Javascript
+// Might not make sense in some countries:
+isOverEighteen()
+
+// Works everywhere:
+isLegalAge()
+```
+
+#### 2. Avoid Globals Variables
+
+You run the danger of your code being overwritten by any other JavaScript added to the page after yours.
+Use closures and the module pattern instead.
+
+**Problem:** all variables are global and can be accessed; access is not contained, anything in the page can overwrite what you do.
+
+```Javascript
+var current = null;
+var labels = {
+   'home':'home',
+   'articles':'articles',
+   'contact':'contact'
+};
+function init(){
+};
+function show(){
+   current = 1;
+};
+function hide(){
+   show();
+};
+```
+
+**Solution:** use module pattern. Keep consistent syntax and mix and match what to make global.
+
+```Javascript
+module = function(){
+   var current = null;
+   var labels = {
+      'home':'home',
+      'articles':'articles',
+      'contact':'contact'
+   };
+   var init = function(){
+   };
+   var show = function(){
+      current = 1;
+   };
+   var hide = function(){
+      show();
+   }
+   return{init:init, show:show, current:current}
+}();
+module.init();
+```
+
+#### 3. Stick to a Strict Coding Style
+
+Summitech uses [ESLint Airbnb](http://airbnb.io/javascript/).
+
+#### 4. Use Shortcut Notations
+
+Shortcut notations keep your code snappy and easier to read once you get used to it.
+
+Example 1
+
+```Javascript
+// this code
+var lunch = new Array();
+lunch[0]='Dosa';
+lunch[1]='Roti';
+lunch[2]='Rice';
+lunch[3]='what the heck is this?';
+
+// is same as...
+var lunch = [
+   'Dosa',
+   'Roti',
+   'Rice',
+   'what the heck is this?'
+];
+```
+
+Example 2
+
+```Javascript
+// this code
+var direction;
+if(x > 100){
+   direction = 1;
+} else {
+   direction = -1;
+}
+
+// is same as...
+var direction = (x > 100) ? 1 : -1;
+```
+
+#### 5. Modularize
+
+**Keep your code modularized and specialized.**
+
+It is tempting and easy to write one function that does everything. However, as you extend the functionality you will find that you do the same things in several functions.
+
+To prevent that, make sure to write smaller, generic helper functions that fulfill one specific task rather than catch-all methods.
+
+At a later stage you can also expose these functions when using the revealing module pattern to create an API to extend the main functionality.
+
+Good code should be easy to build upon without rewriting the core.
+
+#### 6. Avoid Heavy Nesting
+
+Code gets unreadable after a certain level of nesting.
+
+For example
+
+```Javascript
+// A really bad idea is to nest loops inside loops as that also means taking care of several iterator variables (i,j,k,l,m...).
+function renderProfiles(o){
+   var out = document.getElementById('profiles');
+   for(var i=0;i<o.members.length;i++){
+      var ul = document.createElement('ul');
+      var li = document.createElement('li');
+      li.appendChild(document.createTextNode(o.members[i].name));
+      var nestedul = document.createElement('ul');
+      for(var j=0;j<o.members[i].data.length;j++){
+         var datali = document.createElement('li');
+         datali.appendChild(
+            document.createTextNode(
+               o.members[i].data[j].label + ' ' +
+               o.members[i].data[j].value
+            )
+         );
+         nestedul.appendChild(detali);
+      }
+      li.appendChild(nestedul);
+   }
+   out.appendChild(ul);
+}
+
+// You can avoid heavy nesting and loops inside loops with specialized tool methods.
+function renderProfiles(o){
+   var out = document.getElementById('profiles');
+   for(var i=0;i<o.members.length;i++){
+      var ul = document.createElement('ul');
+      var li = document.createElement('li');
+      li.appendChild(document.createTextNode(data.members[i].name));
+      li.appendChild(addMemberData(o.members[i]));
+   }
+   out.appendChild(ul);
+}
+function addMemberData(member){
+   var ul = document.createElement('ul');
+   for(var i=0;i<member.data.length;i++){
+      var li = document.createElement('li');
+      li.appendChild(
+         document.createTextNode(
+            member.data[i].label + ' ' +
+            member.data[i].value
+         )
+      );
+   }
+   ul.appendChild(li);
+   return ul;
+}
+```
+
+#### 7. Don’t Yield to Browser Whims
+
+Instead of relying on flaky browser behavior and hoping it works across the board...
+
+Avoid hacking around and analyze the problem in detail instead.
+Most of the time you’ll find the extra functionality you need is because of bad planning of your interface.
+
+#### 8. Don’t Trust Any Data
+
+**Good code does not trust any data that comes in.**
+
+- Don’t believe the HTML document, any user can meddle with it for example in Firebug.
+- Don’t trust that data reaches your function is of the right format. Test with typeof and then do something with it.
+- Don’t expect elements in the DOM to be available. Test for them and that they indeed are what you expect them to be before altering them.
+- Never ever use JavaScript to protect something. JavaScript is as easy to crack as it is to code
+
+#### 9. Add Functionality with Javascript Not Content
+
+If you find yourself creating lots and lots of HTML in JavaScript, you might be doing something wrong.
+
+It is not convenient to create using the DOM, it’s flasky to use innerHTML (IE’s Operation Aborted error), and it’s hard to keep track of the quality of the HTML you produce.
+
+If you really have a massive interface that should only be available when JavaScript is turned on, load the interface as a static HTML document via Ajax.
+
+That way you keep maintenance in HTML and allow for customization.
+
+#### 10. Development Code is Not Live Code
+
+Live code is written for machines. Development code is written for humans.
+
+- Collate, minify and optimize your code in a build process.
+- Don’t optimize prematurely and punish your fellow developers and those who have to take over from them.
+- If we cut down on the time spent coding we have more time to perfect the conversion to machine code.
+
+Learn more about Javascript best practices from, [Javascript best practices Part 1](https://www.thinkful.com/learn/javascript-best-practices-1/) and [Javascript best practices Part 2](https://www.thinkful.com/learn/javascript-best-practices-2/).
+
+### Acronyms Every Summitech Developer Should Know
+
+People love acronyms, acronyms are dedicated to reducing, simplifying and thinking twice about what we’re adding, and for a good reason, as developers we tend to complicate things surprisingly often.
+We believe the following acronyms are very useful in building our coding culture as they help buttress most of the best practices
+
+**1. DRY (Don’t Repeat Yourself)**
+
+DRY refers to code writing methodology. DRY usually refers to code duplication. If we write the same logic more than once, we should “DRY up our code.”
+A common way to DRY up code is to wrap our duplicated logic with a function and replace all places it appears with function calls.
+
+```
+Good code is DRY code
+```
+
+**`Example with code repetition:`**
+
+```Javascript
+//flow A
+let username = getUserName();
+let email = getEmail();
+let user = { username, email };
+client.post(user).then(/*do stuff*/);
+
+//flow B
+let username = getUserName();
+let email = getEmail();
+let user = { username, email };
+client.get(user).then(/*do stuff*/);
+```
+
+**`Example with DRY principle:`**
+
+```Javascript
+function getUser(){
+	return {
+		user:getUserName();
+		password:getPassword();
+	}
+}
+//flow A
+client.post(getUser()).then(/*do stuff*/ );
+//flow B
+client.get(getUser()).then(/*do stuff*/);
+```
+
+**2. KISS (Keep It Simple Stupid)**
+
+Keeping it simple surpsingly hard. Usually when someone tries to over-engineer a soluiton to a problem. For example an Architect suggests creating a Microservice framework for a simple website. The Engineer will then say: “Let’s KISS it and do something simpler”.
+
+Another rule of thumb is whenever you think to yourself “Finally I’m going to use something from my Computer Science degree,” you should probably KISS it.
+
+**3. YAGNI (You Aren’t Gonna Need It)**
+
+A step brother of KISS. Part of keeping it simple is not adding modules, frameworks and dependencies we don’t actually need.
+
+Let’s Imagine you’re working on a simple prototype to show to a client.
+
+You decide to develop it in React because you read a cool blog post about it. You then find yourself comparing flux implementations, and deciding to go with Redux. You also need webpack to process JSX for React, naturally.
+
+You decide to setup a small nodejs server to serve your files. You add Socket.IO just in case you’ll need real-time notifications for whatever reason.
+
+You finish your prototype, which is essentially turned out to be a glorified web page to show a concept for your product manager. You later find out your product manager took a screenshot of the page and put it on a slide.
+
+We didn’t really need React + Redux + Socket.IO for a screenshot now did we?
+
+**4. BDUF (Big Design Up Front)**
+
+This is a relic from the waterfall era before everyone became cool and Agile (F.Y.I. Summitech is cool and agile).
+
+This acronym is here to remind us not get over carried with super complex architecture. We shouldn’t spend 3 months designing our application before even writing the first line of code. Start small and iterate.
+
+BDUF is basically what happens when you don’t KISS and end up with a lot of stuff which YAGNI.
+
+**5. SOC (Separation of Concerns)**
+
+Another something we need to keep reminder ourselves is to do just one thing. As developers we apparently want to “do all the things” with every function, class or object we create.
+
+In Unix, this is referred to in the mantra “do one thing well”. It’s also the first [SOLID Principle](https://thefullstack.xyz/solid-javascript/) – “Single Responsibility Principle.”
+
+Either way, it’s really important to remember that every construct you create will do just one thing.
+
+There’s a reason there are so many different ways of reminding you to do just one thing. A lot of times you believe you’re doing just the one thing, but you then realize you can divide that one thing into several other smaller things.
+
+```
+Rule of thumb:
+If we can divide one thing into several other smaller things it is no longer considered a one thing.
+```
+
+Simple right? Don’t make a thing out of it.
+
+You can check out more on [Acronyms Every Developer Should Know](https://thefullstack.xyz/dry-yagni-kiss-tdd-soc-bdfu), for reference.
 
 <a name="writing-tests"></a>
 
 ### Writing Tests
 
-<a name="javascript-naming-conventions"></a>
+Why bother testing your JavaScript?
 
-### Javascript Naming Conventions
+- When a user encounters a bug they look like this: 🤬
+- Bugs grind work to a halt.
+- Bugs cause financial harm.
+- Every single time a bug is encountered, user trust erodes.
+- Bugs are bad.
+
+And who gets blamed? You, the developer.
+
+You know you should squash bugs before your code is deployed.
+
+In Summitech, tests are expected to be written for react and react-native applications.
+
+Currently Summitech use Jest javascript automation frameworks for integration testing in both react and react-native.
+
+Learn more about [Javascript Automated Testing](https://testingjavascript.com/)
 
 <a name="javascript-frameworks"></a>
 
 ### Javascript Frameworks
 
+Summitech currently uses react and react-native as their stack for frontend development
+
 <a name="react"></a>
 
 ### React
 
+Use the [React boilerplate](https://github.com/1molehayo/react-boilerplate) as a guide.
+
 <a name="react-native"></a>
 
 ### React Native
+
+Use the [React Native boilerplate](https://github.com/1molehayo/react-native-boilerplate) as a guide.
+
+<a name="javascript-linting"></a>
+
+### Linting
+
+**Linting for React and React-native applications**
+
+A custom `.eslintrc` file has been setup and included with this documentation to aid in the implementation of these standards. This Linting process requires the following plugins to run
+
+**Required Plugins**
+
+- eslint-config-airbnb
+- eslint-config-airbnb-base
+- eslint-plugin-import
+- eslint-plugin-jsx-a11y
+- eslint-plugin-react
+
+**Add this configuration to your package.json file**
+
+```
+"scripts" : {
+  "lint": "eslint '**/*.{js,jsx}' --quiet"
+}
+"eslintConfig": {
+    "extends": "react-app"
+  },
+```
+
+When your react app is processed, it will provide Warnings and Errors within the console for you to review and correct.
+
+Most items will be flagged as a Warning, but a few items that will generate an Error include:
+
+- Disallow trailing commas
+- No linebreak
+- Do not require require() calls to be placed at top-level module scope
+- Do not flag usage of Function.prototype.apply()
+- Do not require parentheses around arrow function arguments
+- Disallow the use of console in production
+- No restricted syntax
+- Allow the unary operators
+- Enforce return statements in callbacks of array methods
+- Enforce the use of variables within the scope they are defined
+- Enforce consistent brace style for all control statements
+- Require the use of === and !==
+- Disallow the use of alert, confirm, and prompt in production
+- Disallow else blocks after return statements in if statements
+- Disallow empty functions
+- Disallow the use of variables before they are defined
+- Do not enforce that class methods utilize this
+- Allow nested ternary expressions
+- Disallow Unused Expressions
+
+**All items (Warnings and Errors) should be addressed to be inline with Front-End Standards defined in this document.**
+
+A full breakdown of all available Rules in the ESLint linter are available with the [Documentation](https://eslint.org/docs/rules/).
 
 <a name="git"></a>
 
@@ -1327,6 +1750,12 @@ These Code Standards are the culmination of research into best practices as well
 - [Code Guide](http://codeguide.co/)
 - [SASS Style Guide](https://css-tricks.com/sass-style-guide/)
 - [SASS Guidelines](https://sass-guidelin.es/)
+- [Airbnb Style Guide](http://airbnb.io/javascript/)
+- [Javascript Style Guide](http://snowdream.github.io/javascript-style-guide/javascript-style-guide/en/hoisting.html)
+- [Javascript Guidelines](https://eslint.org/docs/rules/)
+- [Automated Testing](https://testingjavascript.com/)
+- [Javascript Best Practices](https://www.slideshare.net/cheilmann/javascript-best-practices-1041724)
+- [Responsive Designs](https://teamtreehouse.com/library/using-a-mobile-first-approach)
 
 <a name="tools"></a>
 
