@@ -344,11 +344,11 @@ Filenames should contain lowercase letters and words should be separated with a 
 The top-level SCSS should serve as a “Table of Contents” with no styles directly within it. Keep all styles organized into component parts. When ordering your partials within your “Table of Contents”, the ideal order/grouping is:
 
 - base (contains global styles, such as resets, typography, variables, etc)
+- helpers (contains global mixins, functions, helper selectors, etc.)
 - components (contains each self-contained component in its own .scss partial)
 - layout (contains styling for larger layout components; e.g. nav, header, footer, etc.)
 - pages (contains page-specific styling, if necessary)
 - themes (contains styling for different themes)
-- helpers (contains global mixins, functions, helper selectors, etc.)
 - vendors (contains 3rd-party styles, mixins, etc.)
 - main.scss (output file that brings together all of the above parts)
 
@@ -361,6 +361,10 @@ There is no penalty to splitting into many small files. It’s much easier to ju
 // base
 @import "base/resets";
 @import "base/typography";
+
+// helpers
+@import "helpers/functions";
+@import "helpers/mixins";
 
 // components
 @import "components/button";
@@ -377,10 +381,6 @@ There is no penalty to splitting into many small files. It’s much easier to ju
 // themes
 @import "themes/default";
 @import "themes/dark-mode";
-
-// helpers
-@import "helpers/functions";
-@import "helpers/mixins";
 
 // vendors
 @import "vendors/bootstrap/bootstrap";
@@ -461,7 +461,6 @@ CSS/SCSS formatting decisions documented below are in place to ensure that code 
 - End all declarations with a semicolon. The last declarations semicolon is optional, but your code is more error prone without it.
 - Comma-separated property values should include a space after each comma (e.g., `box-shadow`).
 - Don't include spaces after commas within `rgb()`, `rgba()`, `hsl()`, `hsla()`, or `rect()` values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).
-- Don't prefix property values or color parameters with a leading zero (e.g., `.5` instead of `0.5` and `-.5px` instead of `-0.5px`).
 - If you need transparency, use `rgba()`. Otherwise, always use the hexadecimal format.
 - Lowercase all hex values (e.g., `#fff`). Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.
 - Use shorthand hex values where available (e.g., `#fff` instead of `#ffffff`).
@@ -987,7 +986,6 @@ Most items will be flagged as a Warning, but a few items that will generate an E
 - Border zero
 - Hex length
 - Hex notation
-- Leading zero
 - Quotes
 - Zero units
 - Space before colon
