@@ -14,49 +14,49 @@ The Table of Contents below will help jump you to the pertinent section of this 
 
 ## Table of Contents
 
-- [Principles of Standardized Code](#principles-of-standardized-code)
-  - [Readability and Minification](#readability-and-minification)
-  - [Whitespace](#whitespace)
-  - [Comments](#comments)
-- [HTML](#html)
-  - [File Naming and Organization](#html-file-naming-and-organization)
-  - [Semantics](#semantics)
-  - [Formatting](#formatting)
-  - [HTML5 DOCTYPE](#html5-doctype)
-  - [Language and Character Encoding](#language-and-character-encoding)
-  - [CSS and JavaScript Includes](#css-and-javascript-includes)
-  - [Attribute Order](#attribute-order)
-  - [Boolean Attributes](#boolean-attributes)
-  - [JavaScript-Generated Markup](#javascript-generated-markup)
-  - [Accessibility](#accessibility)
-  - [Performance](#performance)
-- [CSS/SCSS](#css-scss)
-  - [File Naming and Organization](#scss-file-naming-and-organization)
-  - [Rule Structure](#rule-structure)
-  - [Rule/Selector/Property Formatting](#rule-selector-property-formatting)
-  - [Property Declaration Order](#property-declaration-order)
-  - [Pixels vs. EMs vs. REMs for Typography](#pixels-ems-rems-for-typography)
-  - [Comments](#scss-comments)
-  - [Class Naming Conventions](#class-naming-conventions)
-  - [Block Element Modifier (BEM)](#block-element-modifier-bem)
-  - [CSS and JavaScript](#css-and-javascript)
-  - [CSS Frameworks](#css-frameworks)
-  - [Responsive Designs](#responsive-designs)
-  - [Linting](#scss-linting)
-- [Javascript](#javascript)
-  - [File Naming and Organization](#javascript-file-naming-and-organization)
-  - [Comments](#javascript-comments)
-  - [Javascript Best Practices](#javascript-best-practices)
-  - [Writing Tests](#writing-tests)
-  - [Javascript Frameworks](#javascript-frameworks)
-    - [React](#react)
-    - [React Native](#react-native)
-  - [Linting](#javascript-linting)
-- [Git](#git)
-- [Images](#images)
-- [Editor Config](#editor-config)
-- [Sources](#sources)
-- [Tools](#tools)
+-   [Principles of Standardized Code](#principles-of-standardized-code)
+    -   [Readability and Minification](#readability-and-minification)
+    -   [Whitespace](#whitespace)
+    -   [Comments](#comments)
+-   [HTML](#html)
+    -   [File Naming and Organization](#html-file-naming-and-organization)
+    -   [Semantics](#semantics)
+    -   [Formatting](#formatting)
+    -   [HTML5 DOCTYPE](#html5-doctype)
+    -   [Language and Character Encoding](#language-and-character-encoding)
+    -   [CSS and JavaScript Includes](#css-and-javascript-includes)
+    -   [Attribute Order](#attribute-order)
+    -   [Boolean Attributes](#boolean-attributes)
+    -   [JavaScript-Generated Markup](#javascript-generated-markup)
+    -   [Accessibility](#accessibility)
+    -   [Performance](#performance)
+-   [CSS/SCSS](#css-scss)
+    -   [File Naming and Organization](#scss-file-naming-and-organization)
+    -   [Rule Structure](#rule-structure)
+    -   [Rule/Selector/Property Formatting](#rule-selector-property-formatting)
+    -   [Property Declaration Order](#property-declaration-order)
+    -   [Pixels vs. EMs vs. REMs for Typography](#pixels-ems-rems-for-typography)
+    -   [Comments](#scss-comments)
+    -   [Class Naming Conventions](#class-naming-conventions)
+    -   [Block Element Modifier (BEM)](#block-element-modifier-bem)
+    -   [CSS and JavaScript](#css-and-javascript)
+    -   [CSS Frameworks](#css-frameworks)
+    -   [Responsive Designs](#responsive-designs)
+    -   [Linting](#scss-linting)
+-   [Javascript](#javascript)
+    -   [File Naming and Organization](#javascript-file-naming-and-organization)
+    -   [Comments](#javascript-comments)
+    -   [Javascript Best Practices](#javascript-best-practices)
+    -   [Writing Tests](#writing-tests)
+    -   [Javascript Frameworks](#javascript-frameworks)
+        -   [React](#react)
+        -   [React Native](#react-native)
+    -   [Linting](#javascript-linting)
+-   [Git](#git)
+-   [Images](#images)
+-   [Editor Config](#editor-config)
+-   [Sources](#sources)
+-   [Tools](#tools)
 
 <a name="principles-of-standardized-code"></a>
 
@@ -64,11 +64,11 @@ The Table of Contents below will help jump you to the pertinent section of this 
 
 There are several guiding principles with Code Standards. These represent the core concepts of standardized code and why we use this document to guide development best practices.
 
-- Code should be readable and understandable by all members of the team. This includes internal and external developers.
-- All code, regardless of the project, should read as if it was developed by a single person regardless of how many individuals actually worked on it.
-- The style of writing and implementation of these Code Standards is agreed upon and implemented by the team.
-- Assist in developing well-formed, semantically correct, and mostly valid code.
-- Aid in the onboarding of new development team members to new and existing projects.
+-   Code should be readable and understandable by all members of the team. This includes internal and external developers.
+-   All code, regardless of the project, should read as if it was developed by a single person regardless of how many individuals actually worked on it.
+-   The style of writing and implementation of these Code Standards is agreed upon and implemented by the team.
+-   Assist in developing well-formed, semantically correct, and mostly valid code.
+-   Aid in the onboarding of new development team members to new and existing projects.
 
 <a name="readability-and-minification"></a>
 
@@ -82,8 +82,8 @@ _Automation tools such as [Gulp](https://gulpjs.com/) are used to combine and mi
 
 ### Whitespace
 
-- Always be consistent in your use of whitespace using it to improve code readability.
-- Use soft tabs with four spaces.
+-   Always be consistent in your use of whitespace using it to improve code readability.
+-   Use soft tabs with four spaces.
 
 _Our [.editorconfig](#editor-config) file helps with maintaining proper whitespace in different files._
 
@@ -99,11 +99,11 @@ Your code should be easily readable and self-explanatory, thus removing the need
 
 HTML (Hyper Text Markup Language) acts as the Structure or skeleton for which our Presentation (Styles) and Functionality (JavaScript) are built on. This makes it the foundation of the other components of our Front-End. It’s semantics can have a either a positive, or negative, impact on:
 
-- Browser Rendering Speed
-- Search Engine Optimization (SEO)
-- Accessibility (a11y)
-- Validation
-- Usability
+-   Browser Rendering Speed
+-   Search Engine Optimization (SEO)
+-   Accessibility (a11y)
+-   Validation
+-   Usability
 
 <a name="html-file-naming-and-organization"></a>
 
@@ -125,50 +125,54 @@ HTML5 provides us with lots of semantic elements aimed to describe precisely the
 
 ## Formatting
 
-- Attribute values, even numeric attributes, should be quoted. Even though quotes around attributes are optional, always put quotes around attributes for readability. Always use double quotes, never single quotes, on attributes.
-- **DO NOT** include a trailing slash in self-closing elements - the HTML5 spec defines this as optional. These self-closing elements include:
-  - `<hr>`
-  - `<br>`
-  - `<input>`
-  - `<img>`
-- **DO NOT** omit optional closing tags (e.g. `</li>` or `</body>`).
-- Element and attribute names should all be lowercase.
-- Nested elements should be indented once (four spaces).
-- Classes are preferred over IDs when it comes to CSS references to avoid specificity issues. More details on [Class Naming Conventions](#class-naming-conventions) are below.
+-   Attribute values, even numeric attributes, should be quoted. Even though quotes around attributes are optional, always put quotes around attributes for readability. Always use double quotes, never single quotes, on attributes.
+-   **DO NOT** include a trailing slash in self-closing elements - the HTML5 spec defines this as optional. These self-closing elements include:
+    -   `<hr>`
+    -   `<br>`
+    -   `<input>`
+    -   `<img>`
+-   **DO NOT** omit optional closing tags (e.g. `</li>` or `</body>`).
+-   Element and attribute names should all be lowercase.
+-   Nested elements should be indented once (four spaces).
+-   Classes are preferred over IDs when it comes to CSS references to avoid specificity issues. More details on [Class Naming Conventions](#class-naming-conventions) are below.
 
 ```html
 <!-- bad -->
 <body>
-  <img src="../path/file" alt="Alternative Text" />
-  <ul id="myList">
-    <li>
-      This is the first part of some sample text before a break. <br />
-      More text after the break.
-    </li>
-
-    <li>Just another list item in the middle of two others.</li>
-    <li>The final list item.</li>
-  </ul>
-
-  <hr />
-  <form><label>Form Label</label> <input type="text" placeholder="Sample Input" /> <input type="submit" value="Submit" /></form>
-
-  <!-- good -->
-  <body>
     <img src="../path/file" alt="Alternative Text" />
-    <ul class="my-list">
-      <li>
-        This is the first part of some sample text before a break. <br />
-        More text after the break.
-      </li>
-      <li>Just another list item in the middle of two others.</li>
-      <li>The final list item.</li>
+    <ul id="myList">
+        <li>
+            This is the first part of some sample text before a break. <br />
+            More text after the break.
+        </li>
+
+        <li>Just another list item in the middle of two others.</li>
+        <li>The final list item.</li>
     </ul>
+
     <hr />
     <form>
-      <label>Form Label</label> <input type="text" placeholder="Sample Input" /> <input type="submit" value="Submit" />
+        <label>Form Label</label> <input type="text" placeholder="Sample Input" />
+        <input type="submit" value="Submit" />
     </form>
-  </body>
+
+    <!-- good -->
+    <body>
+        <img src="../path/file" alt="Alternative Text" />
+        <ul class="my-list">
+            <li>
+                This is the first part of some sample text before a break. <br />
+                More text after the break.
+            </li>
+            <li>Just another list item in the middle of two others.</li>
+            <li>The final list item.</li>
+        </ul>
+        <hr />
+        <form>
+            <label>Form Label</label> <input type="text" placeholder="Sample Input" />
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
 </body>
 ```
 
@@ -185,9 +189,9 @@ Enforce standards mode and more consistent rendering in every browser possible w
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    ...
-  </head>
+    <head>
+        ...
+    </head>
 </html>
 ```
 
@@ -204,10 +208,10 @@ Quickly and easily ensure proper rendering of your content by declaring an expli
 ```html
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8" />
-    ...
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        ...
+    </head>
 </html>
 ```
 
@@ -225,7 +229,7 @@ Per the HTML5 spec, typically there is no need to specify a type when including 
 
 <!-- in-document CSS -->
 <style>
-  /* ... */
+    /* ... */
 </style>
 
 <!-- javascript -->
@@ -238,12 +242,12 @@ Per the HTML5 spec, typically there is no need to specify a type when including 
 
 HTML attributes should come in this particular order for easier reading of code.
 
-- `src`, `for`, `type`, `href`, `value`
-- `class`
-- `id`, `name`
-- `title`, `alt`
-- `role`, `aria-*`
-- `data-*`
+-   `src`, `for`, `type`, `href`, `value`
+-   `class`
+-   `id`, `name`
+-   `title`, `alt`
+-   `role`, `aria-*`
+-   `data-*`
 
 ```html
 <a href="#" class="..." id="..." data-toggle="modal"> Example Link </a>
@@ -261,15 +265,15 @@ As far as Identifiable information is concerned, Classes make for great reusable
 
 XHTML required you to declare a value for all attributes, but HTML5 has no such requirement for boolean attributes. A list of some of these boolean attributes includes:
 
-- autofocus
-- selected
-- checked
-- disabled
-- readonly
-- multiple
-- required
-- novalidate
-- formnovalidate
+-   autofocus
+-   selected
+-   checked
+-   disabled
+-   readonly
+-   multiple
+-   required
+-   novalidate
+-   formnovalidate
 
 ```html
 <input type="text" disabled />
@@ -277,7 +281,7 @@ XHTML required you to declare a value for all attributes, but HTML5 has no such 
 <input type="checkbox" value="1" checked />
 
 <select>
-  <option value="1" selected>1</option>
+    <option value="1" selected>1</option>
 </select>
 ```
 
@@ -295,17 +299,17 @@ Writing markup in a JavaScript file makes the content harder to find, harder to 
 
 Basic accessibility principles should be adhered to when writing HTML - it shouldn't be an afterthought. You don't have to be a [WCAG](https://www.w3.org/WAI/intro/wcag) expert and different clients have different requirements for level of support, but **basic accessibility support can have a huge impact.**
 
-- Use `H1` - `H6` to properly order and identify headings.
-- In tables, use the `scope` attribute to associate header cells and data cells in data tables and use the `summary` attribute of the table element to give an overview of data tables.
-- For forms, always provide a submit button, use `label` elements to associate text labels with form controls, and visually indicate required form controls.
-- With image elements, **always** use `alt` attributes. Use an empty `alt` attribute on image elements that Assistive Technology should ignore.
-  - Good `alt` attribute text should describe the content of the image as specifically as possible.
-  - If an image is used for decorative purposes only, an `alt=""` should be used.
-- Text should NEVER be included as part of an image even when using and `alt` attribute to describe it.
-- Inline `svg` elements should include `title` and, as needed, `desc` elements to provide alternative titles and descriptions.
-  - The `title` element must be the first child of it's parent element. This provides a human readable name for the SVG content.
-  - A `desc` element may be added to describe the SVG. Consider adding `desc` elements to describe complex SVGs such as charts or process maps.
-  - If an SVG image is purely decorative, do not include a title or description. Decorative SVG elements should be identified as presentational by adding the ARIA attributes `aria-hidden="true"` and `role="presentation"`.
+-   Use `H1` - `H6` to properly order and identify headings.
+-   In tables, use the `scope` attribute to associate header cells and data cells in data tables and use the `summary` attribute of the table element to give an overview of data tables.
+-   For forms, always provide a submit button, use `label` elements to associate text labels with form controls, and visually indicate required form controls.
+-   With image elements, **always** use `alt` attributes. Use an empty `alt` attribute on image elements that Assistive Technology should ignore.
+    -   Good `alt` attribute text should describe the content of the image as specifically as possible.
+    -   If an image is used for decorative purposes only, an `alt=""` should be used.
+-   Text should NEVER be included as part of an image even when using and `alt` attribute to describe it.
+-   Inline `svg` elements should include `title` and, as needed, `desc` elements to provide alternative titles and descriptions.
+    -   The `title` element must be the first child of it's parent element. This provides a human readable name for the SVG content.
+    -   A `desc` element may be added to describe the SVG. Consider adding `desc` elements to describe complex SVGs such as charts or process maps.
+    -   If an SVG image is purely decorative, do not include a title or description. Decorative SVG elements should be identified as presentational by adding the ARIA attributes `aria-hidden="true"` and `role="presentation"`.
 
 **For additional information on writing good `alt` attribute text, check out [What is Alt Text (Alternative Text)?](https://moz.com/learn/seo/alt-text) by Moz.**
 
@@ -335,22 +339,22 @@ Representing the Presentation layer of our Front-End Development, it’s importa
 
 Filenames should contain lowercase letters and words should be separated with a hyphen.
 
-- Within individual CSS/SCSS files, organize sections of code by component element.
-- Maintain a consistent commenting hierarchy for each section of code.
-- Use consistent white space to your advantage when separating sections of code for scanning larger documents.
+-   Within individual CSS/SCSS files, organize sections of code by component element.
+-   Maintain a consistent commenting hierarchy for each section of code.
+-   Use consistent white space to your advantage when separating sections of code for scanning larger documents.
 
 #### Global and Section-Specific SCSS
 
 The top-level SCSS should serve as a “Table of Contents” with no styles directly within it. Keep all styles organized into component parts. When ordering your partials within your “Table of Contents”, the ideal order/grouping is:
 
-- base (contains global styles, such as resets, typography, variables, etc)
-- helpers (contains global mixins, functions, helper selectors, etc.)
-- components (contains each self-contained component in its own .scss partial)
-- layout (contains styling for larger layout components; e.g. nav, header, footer, etc.)
-- pages (contains page-specific styling, if necessary)
-- themes (contains styling for different themes)
-- vendors (contains 3rd-party styles, mixins, etc.)
-- main.scss (output file that brings together all of the above parts)
+-   base (contains global styles, such as resets, typography, variables, etc)
+-   helpers (contains global mixins, functions, helper selectors, etc.)
+-   components (contains each self-contained component in its own .scss partial)
+-   layout (contains styling for larger layout components; e.g. nav, header, footer, etc.)
+-   pages (contains page-specific styling, if necessary)
+-   themes (contains styling for different themes)
+-   vendors (contains 3rd-party styles, mixins, etc.)
+-   main.scss (output file that brings together all of the above parts)
 
 Partials are named `_partial-name.scss` - with a "\_" prefix - to indicate that this file isn't meant to be compiled by itself.
 Each folder should have a single .scss partial file that collects the other files in the same directory - such as \_module.scss (my preference) or \_glob.scss
@@ -398,50 +402,50 @@ Source Maps are produced as part of our Gulp build to more easily determine wher
 
 The overall structure of a SCSS rule should follow the below order:
 
-- **Extends and Includes**
-  - Always place `@extend` and `@include` statements on the first lines of a declaration block.
-  - Knowing right off the bat that this class inherits another set of rules from elsewhere is good and overriding styles for that inherited set of rules becomes much easier.
-- **Regular Styles**
-  - Adding our regular styles after `@extend` and `@include` allows us to properly override those properties, if needed.
-  - To support a mobile-first cascade, the styles that are defined first represent the "base" or smallest screen look. Media Queries are added after our Regular Styles to build on or modify the "base" look.
-- **Pseudo Class’ and Elements**
-  - Pseudo Class’ and Pseudo Elements directly relate to the element itself so we nest them first before other selectors.
-  - Differentiate between Pseudo Elements and Pseudo Classes by using a double colon versus a single colon, respectively (`my-class::before { … }` versus `my-class:hover { … }`).
-- **Nested Selectors**
-  - This includes any modifiers and children of the class we’re working within.
+-   **Extends and Includes**
+    -   Always place `@extend` and `@include` statements on the first lines of a declaration block.
+    -   Knowing right off the bat that this class inherits another set of rules from elsewhere is good and overriding styles for that inherited set of rules becomes much easier.
+-   **Regular Styles**
+    -   Adding our regular styles after `@extend` and `@include` allows us to properly override those properties, if needed.
+    -   To support a mobile-first cascade, the styles that are defined first represent the "base" or smallest screen look. Media Queries are added after our Regular Styles to build on or modify the "base" look.
+-   **Pseudo Class’ and Elements**
+    -   Pseudo Class’ and Pseudo Elements directly relate to the element itself so we nest them first before other selectors.
+    -   Differentiate between Pseudo Elements and Pseudo Classes by using a double colon versus a single colon, respectively (`my-class::before { … }` versus `my-class:hover { … }`).
+-   **Nested Selectors**
+    -   This includes any modifiers and children of the class we’re working within.
 
 ```css
 .my-module {
-  @extend %module;
-  @include font-size(16);
+    @extend %module;
+    @include font-size(16);
 
-  background: #0f0;
-  text-transform: uppercase;
-
-  @media screen and (min-width: 768px) {
-    background: #f00;
-    text-align: center;
-  }
-
-  &:hover {
-    background: #0c0;
-  }
-
-  &::before {
-    display: block;
-    content: "";
-  }
-
-  > h3 {
-    @include transform(rotate(90deg));
-
-    border-bottom: 1px solid #fff;
+    background: #0f0;
+    text-transform: uppercase;
 
     @media screen and (min-width: 768px) {
-      border-bottom: 0;
-      text-transform: uppercase;
+        background: #f00;
+        text-align: center;
     }
-  }
+
+    &:hover {
+        background: #0c0;
+    }
+
+    &::before {
+        display: block;
+        content: "";
+    }
+
+    > h3 {
+        @include transform(rotate(90deg));
+
+        border-bottom: 1px solid #fff;
+
+        @media screen and (min-width: 768px) {
+            border-bottom: 0;
+            text-transform: uppercase;
+        }
+    }
 }
 ```
 
@@ -453,49 +457,49 @@ As a rule of thumb, avoid unnecessary nesting in SCSS. **At most, aim for three 
 
 CSS/SCSS formatting decisions documented below are in place to ensure that code is: easy to read; easy to clearly comment; minimizes the chance of accidentally introducing errors; and results in useful diffs and blames:
 
-- When grouping selectors, keep each selector to a single line.
-- Include one space before the opening brace of declaration blocks for legibility.
-- Place closing braces of declaration blocks on a new line.
-- Include one space after the `:` for each declaration.
-- Each declaration should appear on its own line for more accurate error reporting.
-- End all declarations with a semicolon. The last declarations semicolon is optional, but your code is more error prone without it.
-- Comma-separated property values should include a space after each comma (e.g., `box-shadow`).
-- Don't include spaces after commas within `rgb()`, `rgba()`, `hsl()`, `hsla()`, or `rect()` values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).
-- If you need transparency, use `rgba()`. Otherwise, always use the hexadecimal format.
-- Lowercase all hex values (e.g., `#fff`). Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.
-- Use shorthand hex values where available (e.g., `#fff` instead of `#ffffff`).
-- Use single quotes consistently (e.g., `content: '';`).
-- Quote attribute values in selectors (e.g., `input[type='text']`). They’re only optional in some cases, and it’s a good practice for consistency.
-- Avoid specifying units for zero values (e.g., `margin: 0;` instead of `margin: 0px;`).
-- Separate each ruleset by a blank line.
-- Don't make values and selectors hard to override. Minimize the use of id's and avoid `!important`.
-- For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.
+-   When grouping selectors, keep each selector to a single line.
+-   Include one space before the opening brace of declaration blocks for legibility.
+-   Place closing braces of declaration blocks on a new line.
+-   Include one space after the `:` for each declaration.
+-   Each declaration should appear on its own line for more accurate error reporting.
+-   End all declarations with a semicolon. The last declarations semicolon is optional, but your code is more error prone without it.
+-   Comma-separated property values should include a space after each comma (e.g., `box-shadow`).
+-   Don't include spaces after commas within `rgb()`, `rgba()`, `hsl()`, `hsla()`, or `rect()` values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).
+-   If you need transparency, use `rgba()`. Otherwise, always use the hexadecimal format.
+-   Lowercase all hex values (e.g., `#fff`). Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.
+-   Use shorthand hex values where available (e.g., `#fff` instead of `#ffffff`).
+-   Use single quotes consistently (e.g., `content: '';`).
+-   Quote attribute values in selectors (e.g., `input[type='text']`). They’re only optional in some cases, and it’s a good practice for consistency.
+-   Avoid specifying units for zero values (e.g., `margin: 0;` instead of `margin: 0px;`).
+-   Separate each ruleset by a blank line.
+-   Don't make values and selectors hard to override. Minimize the use of id's and avoid `!important`.
+-   For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.
 
 ```css
 .selector-1,
 .selector-2,
 .selector-3[type="text"] {
-  display: block;
-  box-shadow: 0 1px 2px #ccc;
-  background: #fff;
-  background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
-  font-family: helvetica, arial, sans-serif;
-  color: #333;
+    display: block;
+    box-shadow: 0 1px 2px #ccc;
+    background: #fff;
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+    font-family: helvetica, arial, sans-serif;
+    color: #333;
 
-  &::before {
-    position: absolute;
-    padding: 0;
-    content: "";
-  }
+    &::before {
+        position: absolute;
+        padding: 0;
+        content: "";
+    }
 }
 
 .selector-a {
-  padding: (10px * 2) 5px;
+    padding: (10px * 2) 5px;
 }
 
 .selector-b,
 .selector-c {
-  padding: 10px;
+    padding: 10px;
 }
 ```
 
@@ -507,8 +511,8 @@ Long, comma-separated property values - such as collections of gradients or shad
 
 ```css
 .selector-1 {
-  display: block;
-  box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
+    display: block;
+    box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
 }
 ```
 
@@ -516,13 +520,13 @@ In instances where a rule set includes only one declaration it may optionally be
 
 ```css
 .span1 {
-  width: 60px;
+    width: 60px;
 }
 .span2 {
-  width: 140px;
+    width: 140px;
 }
 .span3 {
-  width: 220px;
+    width: 220px;
 }
 ```
 
@@ -532,252 +536,252 @@ In instances where a rule set includes only one declaration it may optionally be
 
 Related property declarations should be grouped together following the below general order:
 
-- **Box Sizing**
-  - `box-sizing`
-- **Position**
-  - `z-index`
-  - `position`
-  - `top`
-  - `right`
-  - `bottom`
-  - `left`
-- **Display**
-  - `display`
-- **Flex**
-  - `flex`
-  - `flex-basis`
-  - `flex-direction`
-  - `flex-flow`
-  - `flex-grow`
-  - `flex-shrink`
-  - `flex-wrap`
-  - `align-content`
-  - `align-items`
-  - `align-self`
-  - `justify-content`
-- **Grid**
-  - `grid`
-  - `grid-area`
-  - `grid-template`
-  - `grid-template-areas`
-  - `grid-template-rows`
-  - `grid-template-columns`
-  - `grid-column`
-  - `grid-column-start`
-  - `grid-column-end`
-  - `grid-row`
-  - `grid-row-start`
-  - `grid-row-end`
-  - `grid-auto-rows`
-  - `grid-auto-columns`
-  - `grid-auto-flow`
-  - `grid-gap`
-  - `grid-row-gap`
-  - `grid-column-gap`
-- **Order**
-  - `order`
-- **Columns**
-  - `columns`
-  - `column-gap`
-  - `column-fill`
-  - `column-rule`
-  - `column-rule-width`
-  - `column-rule-style`
-  - `column-rule-color`
-  - `column-span`
-  - `column-count`
-  - `column-width`
-- **Float**
-  - `float`
-  - `clear`
-- **Margin**
-  - `margin`
-  - `margin-top`
-  - `margin-right`
-  - `margin-bottom`
-  - `margin-left`
-  - `margin-collapse`
-  - `margin-top-collapse`
-  - `margin-right-collapse`
-  - `margin-bottom-collapse`
-  - `margin-left-collapse`
-- **Outline**
-  - `outline`
-  - `outline-offset`
-  - `outline-width`
-  - `outline-style`
-  - `outline-color`
-- **Box Shadow**
-  - `box-shadow`
-- **Border Radius**
-  - `border-radius`
-  - `border-top-right-radius`
-  - `border-top-left-radius`
-  - `border-bottom-right-radius`
-  - `border-bottom-left-radius`
-- **Border**
-  - `border`
-  - `border-top`
-  - `border-right`
-  - `border-bottom`
-  - `border-left`
-  - `border-width`
-  - `border-top-width`
-  - `border-right-width`
-  - `border-bottom-width`
-  - `border-left-width`
-- **Border Style**
-  - `border-style`
-  - `border-top-style`
-  - `border-right-style`
-  - `border-bottom-style`
-  - `border-left-style`
-- **Border Color**
-  - `border-color`
-  - `border-top-color`
-  - `border-right-color`
-  - `border-bottom-color`
-  - `border-left-color`
-- **Border Image**
-  - `border-image`
-  - `border-image-source`
-  - `border-image-width`
-  - `border-image-outset`
-  - `border-image-repeat`
-  - `border-image-slice`
-- **Padding**
-  - `padding`
-  - `padding-top`
-  - `padding-right`
-  - `padding-bottom`
-  - `padding-left`
-- **Width**
-  - `width`
-  - `min-width`
-  - `max-width`
-- **Height**
-  - `height`
-  - `min-height`
-  - `max-height`
-- **Overflow**
-  - `overflow`
-  - `overflow-x`
-  - `overflow-y`
-  - `resize`
-- **Background**
-  - `background`
-  - `background-attachment`
-  - `background-clip`
-  - `background-color`
-  - `background-image`
-  - `background-repeat`
-  - `background-position`
-  - `background-size`
-- **Cursor and Events**
-  - `cursor`
-  - `pointer-events`
-- **svg**
-  - `fill`
-  - `stroke`
-- **List Style**
-  - `list-style`
-  - `list-style-type`
-  - `list-style-position`
-  - `list-style-image`
-  - `caption-side`
-- **Counters**
-  - `counter-reset`
-  - `counter-increment`
-- **Tables**
-  - `table-layout`
-  - `border-collapse`
-  - `border-spacing`
-  - `empty-cells`
-- **Visibility**
-  - `opacity`
-  - `visibility`
-- **Vertical Alignment**
-  - `vertical-align`
-- **Text Alignment and Decoration**
-  - `direction`
-  - `tab-size`
-  - `text-align`
-  - `text-align-last`
-  - `text-decoration`
-  - `text-decoration-color`
-  - `text-decoration-line`
-  - `text-decoration-style`
-  - `text-justify`
-  - `text-indent`
-  - `text-transform`
-  - `text-rendering`
-  - `text-shadow`
-  - `text-overflow`
-- **Text Spacing**
-  - `line-height`
-  - `letter-spacing`
-  - `word-spacing`
-  - `white-space`
-  - `word-break`
-  - `word-wrap`
-- **Font**
-  - `font`
-  - `font-family`
-  - `font-size`
-  - `font-size-adjust`
-  - `font-stretch`
-  - `font-weight`
-  - `font-smoothing`
-  - `osx-font-smoothing`
-  - `font-variant`
-  - `font-style`
-- **Color**
-  - `color`
-- **Animation**
-  - `animation`
-  - `animation-name`
-  - `animation-duration`
-  - `animation-timing-function`
-  - `animation-delay`
-  - `animation-iteration-count`
-  - `animation-direction`
-  - `animation-fill-mode`
-  - `animation-play-state`
-- **Transform**
-  - `backface-visibility`
-  - `perspective`
-  - `perspective-origin`
-  - `transform`
-  - `transform-origin`
-  - `transform-style`
-- **Transition**
-  - `transition`
-  - `transition-delay`
-  - `transition-duration`
-  - `transition-property`
-  - `transition-timing-function`
-- **Content**
-  - `content`
-  - `quotes`
-- **Breaks**
-  - `page-break-before`
-  - `page-break-after`
-  - `page-break-inside`
-- **Misc**
-  - `hyphens`
-  - `src`
-  - `clip`
-  - `filter`
-  - `size`
-  - `zoom`
-  - `appearance`
-  - `user-select`
-  - `interpolation-mode`
-  - `marks`
-  - `page`
-  - `set-link-source`
-  - `unicode-bidi`
-  - `speak`
+-   **Box Sizing**
+    -   `box-sizing`
+-   **Position**
+    -   `z-index`
+    -   `position`
+    -   `top`
+    -   `right`
+    -   `bottom`
+    -   `left`
+-   **Display**
+    -   `display`
+-   **Flex**
+    -   `flex`
+    -   `flex-basis`
+    -   `flex-direction`
+    -   `flex-flow`
+    -   `flex-grow`
+    -   `flex-shrink`
+    -   `flex-wrap`
+    -   `align-content`
+    -   `align-items`
+    -   `align-self`
+    -   `justify-content`
+-   **Grid**
+    -   `grid`
+    -   `grid-area`
+    -   `grid-template`
+    -   `grid-template-areas`
+    -   `grid-template-rows`
+    -   `grid-template-columns`
+    -   `grid-column`
+    -   `grid-column-start`
+    -   `grid-column-end`
+    -   `grid-row`
+    -   `grid-row-start`
+    -   `grid-row-end`
+    -   `grid-auto-rows`
+    -   `grid-auto-columns`
+    -   `grid-auto-flow`
+    -   `grid-gap`
+    -   `grid-row-gap`
+    -   `grid-column-gap`
+-   **Order**
+    -   `order`
+-   **Columns**
+    -   `columns`
+    -   `column-gap`
+    -   `column-fill`
+    -   `column-rule`
+    -   `column-rule-width`
+    -   `column-rule-style`
+    -   `column-rule-color`
+    -   `column-span`
+    -   `column-count`
+    -   `column-width`
+-   **Float**
+    -   `float`
+    -   `clear`
+-   **Margin**
+    -   `margin`
+    -   `margin-top`
+    -   `margin-right`
+    -   `margin-bottom`
+    -   `margin-left`
+    -   `margin-collapse`
+    -   `margin-top-collapse`
+    -   `margin-right-collapse`
+    -   `margin-bottom-collapse`
+    -   `margin-left-collapse`
+-   **Outline**
+    -   `outline`
+    -   `outline-offset`
+    -   `outline-width`
+    -   `outline-style`
+    -   `outline-color`
+-   **Box Shadow**
+    -   `box-shadow`
+-   **Border Radius**
+    -   `border-radius`
+    -   `border-top-right-radius`
+    -   `border-top-left-radius`
+    -   `border-bottom-right-radius`
+    -   `border-bottom-left-radius`
+-   **Border**
+    -   `border`
+    -   `border-top`
+    -   `border-right`
+    -   `border-bottom`
+    -   `border-left`
+    -   `border-width`
+    -   `border-top-width`
+    -   `border-right-width`
+    -   `border-bottom-width`
+    -   `border-left-width`
+-   **Border Style**
+    -   `border-style`
+    -   `border-top-style`
+    -   `border-right-style`
+    -   `border-bottom-style`
+    -   `border-left-style`
+-   **Border Color**
+    -   `border-color`
+    -   `border-top-color`
+    -   `border-right-color`
+    -   `border-bottom-color`
+    -   `border-left-color`
+-   **Border Image**
+    -   `border-image`
+    -   `border-image-source`
+    -   `border-image-width`
+    -   `border-image-outset`
+    -   `border-image-repeat`
+    -   `border-image-slice`
+-   **Padding**
+    -   `padding`
+    -   `padding-top`
+    -   `padding-right`
+    -   `padding-bottom`
+    -   `padding-left`
+-   **Width**
+    -   `width`
+    -   `min-width`
+    -   `max-width`
+-   **Height**
+    -   `height`
+    -   `min-height`
+    -   `max-height`
+-   **Overflow**
+    -   `overflow`
+    -   `overflow-x`
+    -   `overflow-y`
+    -   `resize`
+-   **Background**
+    -   `background`
+    -   `background-attachment`
+    -   `background-clip`
+    -   `background-color`
+    -   `background-image`
+    -   `background-repeat`
+    -   `background-position`
+    -   `background-size`
+-   **Cursor and Events**
+    -   `cursor`
+    -   `pointer-events`
+-   **svg**
+    -   `fill`
+    -   `stroke`
+-   **List Style**
+    -   `list-style`
+    -   `list-style-type`
+    -   `list-style-position`
+    -   `list-style-image`
+    -   `caption-side`
+-   **Counters**
+    -   `counter-reset`
+    -   `counter-increment`
+-   **Tables**
+    -   `table-layout`
+    -   `border-collapse`
+    -   `border-spacing`
+    -   `empty-cells`
+-   **Visibility**
+    -   `opacity`
+    -   `visibility`
+-   **Vertical Alignment**
+    -   `vertical-align`
+-   **Text Alignment and Decoration**
+    -   `direction`
+    -   `tab-size`
+    -   `text-align`
+    -   `text-align-last`
+    -   `text-decoration`
+    -   `text-decoration-color`
+    -   `text-decoration-line`
+    -   `text-decoration-style`
+    -   `text-justify`
+    -   `text-indent`
+    -   `text-transform`
+    -   `text-rendering`
+    -   `text-shadow`
+    -   `text-overflow`
+-   **Text Spacing**
+    -   `line-height`
+    -   `letter-spacing`
+    -   `word-spacing`
+    -   `white-space`
+    -   `word-break`
+    -   `word-wrap`
+-   **Font**
+    -   `font`
+    -   `font-family`
+    -   `font-size`
+    -   `font-size-adjust`
+    -   `font-stretch`
+    -   `font-weight`
+    -   `font-smoothing`
+    -   `osx-font-smoothing`
+    -   `font-variant`
+    -   `font-style`
+-   **Color**
+    -   `color`
+-   **Animation**
+    -   `animation`
+    -   `animation-name`
+    -   `animation-duration`
+    -   `animation-timing-function`
+    -   `animation-delay`
+    -   `animation-iteration-count`
+    -   `animation-direction`
+    -   `animation-fill-mode`
+    -   `animation-play-state`
+-   **Transform**
+    -   `backface-visibility`
+    -   `perspective`
+    -   `perspective-origin`
+    -   `transform`
+    -   `transform-origin`
+    -   `transform-style`
+-   **Transition**
+    -   `transition`
+    -   `transition-delay`
+    -   `transition-duration`
+    -   `transition-property`
+    -   `transition-timing-function`
+-   **Content**
+    -   `content`
+    -   `quotes`
+-   **Breaks**
+    -   `page-break-before`
+    -   `page-break-after`
+    -   `page-break-inside`
+-   **Misc**
+    -   `hyphens`
+    -   `src`
+    -   `clip`
+    -   `filter`
+    -   `size`
+    -   `zoom`
+    -   `appearance`
+    -   `user-select`
+    -   `interpolation-mode`
+    -   `marks`
+    -   `page`
+    -   `set-link-source`
+    -   `unicode-bidi`
+    -   `speak`
 
 Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.
 
@@ -785,44 +789,44 @@ Everything else takes place inside the component or without impacting the previo
 
 ```css
 .declaration-order {
-  /* positioning */
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    /* positioning */
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-  /* display and box-model */
-  display: block;
-  float: right;
-  margin: 0;
-  outline: 1px solid #f00;
-  box-shadow: 0 5px 5px #000;
-  border-radius: 50%;
-  border: 1px solid #999;
-  padding: 0;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  background-color: #f5f5f5;
-  opacity: 1;
-  visibility: visible;
-  vertical-align: middle;
+    /* display and box-model */
+    display: block;
+    float: right;
+    margin: 0;
+    outline: 1px solid #f00;
+    box-shadow: 0 5px 5px #000;
+    border-radius: 50%;
+    border: 1px solid #999;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    opacity: 1;
+    visibility: visible;
+    vertical-align: middle;
 
-  /* typography */
-  text-align: center;
-  text-decoration: underline;
-  line-height: 1.5;
-  font: normal 13px "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  color: #333;
+    /* typography */
+    text-align: center;
+    text-decoration: underline;
+    line-height: 1.5;
+    font: normal 13px "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    color: #333;
 
-  /* misc */
-  transform: translateX(10px);
-  transition: color #f00;
-  content: "";
-  appearance: none;
+    /* misc */
+    transform: translateX(10px);
+    transition: color #f00;
+    content: "";
+    appearance: none;
 }
 ```
 
@@ -842,11 +846,11 @@ _`font-size` and `line-height` mixins are available and will generate a REM valu
 
 Well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don't leave others in the team guessing as to the purpose of uncommon or non-obvious code.
 
-- Each SCSS partial should have a clear comment header to define the role of this section of code.
-- Place comments on a new line above their subject.
-- Keep line-length to a sensible maximum (e.g. 80 columns).
-- Make liberal use of comments to break SCSS code into discrete sections.
-- Use "sentence case" comments and consistent text indentation.
+-   Each SCSS partial should have a clear comment header to define the role of this section of code.
+-   Place comments on a new line above their subject.
+-   Keep line-length to a sensible maximum (e.g. 80 columns).
+-   Make liberal use of comments to break SCSS code into discrete sections.
+-   Use "sentence case" comments and consistent text indentation.
 
 ```css
 /*
@@ -879,9 +883,9 @@ Pre-formatted comment chunks can be setup within most IDEs and tied to a keyboar
 
 ### Class Naming Conventions
 
-- Avoid excessive and arbitrary shorthand notation. `.btn` is useful for button, but `.s` doesn't mean anything.
-- Use meaningful names; use structural or purposeful names over presentational.
-- It's also useful to apply many of these same rules when creating SCSS variable names.
+-   Avoid excessive and arbitrary shorthand notation. `.btn` is useful for button, but `.s` doesn't mean anything.
+-   Use meaningful names; use structural or purposeful names over presentational.
+-   It's also useful to apply many of these same rules when creating SCSS variable names.
 
 <a name="block-element-modifier-bem"></a>
 
@@ -895,44 +899,44 @@ The naming convention follows this pattern:
 
 ```css
 .block {
-  ...;
+    ...;
 }
 .block__element {
-  ...;
+    ...;
 }
 .block--modifier {
-  ...;
+    ...;
 }
 ```
 
-- `.block` represents the higher level of an abstraction or component.
-- `.block__element` represents a descendent of `.block` that helps form `.block` as a whole.
-- `.block--modifier` represents a different state or version of `.block`.
+-   `.block` represents the higher level of an abstraction or component.
+-   `.block__element` represents a descendent of `.block` that helps form `.block` as a whole.
+-   `.block--modifier` represents a different state or version of `.block`.
 
 An analogy/model for how elements are related:
 
 ```css
 .media {
-  ...;
+    ...;
 }
 .media__img {
-  ...;
+    ...;
 }
 .media__img--rev {
-  ...;
+    ...;
 }
 .media__body {
-  ...;
+    ...;
 }
 ```
 
 ```html
 <div class="media">
-  <img src="logo.png" class="media__img media__img--rev" alt="Foo Corp logo" />
-  <div class="media__body">
-    <h3 class="h2">Welcome to Foo Corp</h3>
-    <p class="lede">Foo Corp is the best, seriously!</p>
-  </div>
+    <img src="logo.png" class="media__img media__img--rev" alt="Foo Corp logo" />
+    <div class="media__body">
+        <h3 class="h2">Welcome to Foo Corp</h3>
+        <p class="lede">Foo Corp is the best, seriously!</p>
+    </div>
 </div>
 ```
 
@@ -971,32 +975,50 @@ A custom `.sass-lint.yml` file has been setup and included with this documentati
 
 Most items will be flagged as a Warning, but a few items that will generate an Error include:
 
-- Extends before mixins
-- Extends before declarations
-- Mixins before declarations
-- One declaration per line
-- Empty line between blocks
-- Single line per selector
-- No invalid hexs
-- No trailing whitespace
-- No URL domains
-- No URL protocols
-- Declarations before nesting
-- Quote attributes
-- Border zero
-- Hex length
-- Hex notation
-- Quotes
-- Zero units
-- Space before colon
-- Space after colon
-- Space before brace
-- Space before bang (!)
-- Space after bang (!)
-- Space between parens
-- Space around operator
-- Trailing semicolon
-- Final newline
+-   Extends before mixins
+-   Extends before declarations
+-   Mixins before declarations
+-   One declaration per line
+-   Empty line between blocks
+-   Single line per selector
+-   No invalid hexs
+-   No trailing whitespace
+-   No URL domains
+-   No URL protocols
+-   Declarations before nesting
+-   Quote attributes
+-   Border zero
+-   Hex length
+-   Hex notation
+-   Quotes
+-   Zero units
+-   Space before colon
+-   Space after colon
+-   Space before brace
+-   Space before bang (!)
+-   Space after bang (!)
+-   Space between parens
+-   Space around operator
+-   Trailing semicolon
+-   Final newline
+
+**Required Plugins**
+- node-sass
+- sass-lint
+
+**Required Editor Plugins**
+- Sass Lint
+
+Sass-lint can be integrated with the following IDEs
+
+- Atom
+- Sublime Text
+- Brackets
+- IntelliJ IDEA, RubyMine, WebStorm, PhpStorm, PyCharm
+- Visual Studio Code
+- Vim
+
+
 
 **All items (Warnings and Errors) should be addressed to be inline with Front-End Standards defined in this document.**
 
@@ -1009,7 +1031,7 @@ _NOTE: There are instances where exceptions to these Linting rules are necessary
 ```css
 // sass-lint:disable border-zero
 p {
-  border: 0; // No lint reported
+    border: 0; // No lint reported
 }
 ```
 
@@ -1018,8 +1040,8 @@ p {
 ```css
 // sass-lint:disable border-zero, quotes
 p {
-  border: none; // No lint reported
-  content: "hello"; // No lint reported
+    border: none; // No lint reported
+    content: "hello"; // No lint reported
 }
 ```
 
@@ -1027,7 +1049,7 @@ p {
 
 ```css
 p {
-  border: 0; // sass-lint:disable-line border-zero
+    border: 0; // sass-lint:disable-line border-zero
 }
 ```
 
@@ -1035,12 +1057,12 @@ p {
 
 ```css
 p {
-  // sass-lint:disable-block border-zero
-  border: 0; // No result reported
+    // sass-lint:disable-block border-zero
+    border: 0; // No result reported
 }
 
 a {
-  border: 0; // Failing result reported
+    border: 0; // Failing result reported
 }
 ```
 
@@ -1049,12 +1071,12 @@ a {
 ```css
 // sass-lint:disable border-zero
 p {
-  border: 0; // No result reported
+    border: 0; // No result reported
 }
 // sass-lint:enable border-zero
 
 a {
-  border: 0; // Failing result reported
+    border: 0; // Failing result reported
 }
 ```
 
@@ -1063,12 +1085,12 @@ a {
 ```css
 // sass-lint:disable-all
 p {
-  border: 0; // No result reported
+    border: 0; // No result reported
 }
 // sass-lint:enable-all
 
 a {
-  border: 0; // Failing result reported
+    border: 0; // Failing result reported
 }
 ```
 
@@ -1090,15 +1112,15 @@ Mobile-First Responsive Web Design is a combination of philosophies/strategies, 
 
 Mobile First simply highlights the need to prioritize the mobile context when creating user experiences. Starting with mobile first:
 
-- Allows websites to reach more people (77% of the world’s population has a mobile device, 85% of phones sold in 2011 equipped with browser)
-- Forces designers to focus on core content and functionality (What do you do when you lose 80% of your screen real estate?)
-- Lets designers innovate and take advantage of new technologies (geolocation, touch events and more)
+-   Allows websites to reach more people (77% of the world’s population has a mobile device, 85% of phones sold in 2011 equipped with browser)
+-   Forces designers to focus on core content and functionality (What do you do when you lose 80% of your screen real estate?)
+-   Lets designers innovate and take advantage of new technologies (geolocation, touch events and more)
 
 Creating a responsive web design utilizes:
 
-- Fluid grids that ebb and flow with a devices’ screen size
-- Flexible images and media that keep content intact on any resolution
-- Media queries allowing designs to adapt by establishing dimension breakpoints
+-   Fluid grids that ebb and flow with a devices’ screen size
+-   Flexible images and media that keep content intact on any resolution
+-   Media queries allowing designs to adapt by establishing dimension breakpoints
 
 You can find more information in [Brad Frost - Mobile First Responsive Web Design](#http://bradfrost.com/blog/post/mobile-first-responsive-web-design/)
 
@@ -1108,7 +1130,7 @@ You can find more information in [Brad Frost - Mobile First Responsive Web Desig
 
 Representing the Logic layer of our Front-End Development, it’s important that our Javascript logic is well organized and documented, in alignment with the world standard best practices today.
 
-**A [.eslintrc](#javascript-linting) file is included with this documentation to aid in enforcing some of these standards.** A full breakdown of the current `.eslintrc` is provided later in this document.
+**A [.eslintrc](#javascript-linting) file and a .prettierrc file is included with this documentation to aid in enforcing some of these standards.** A full breakdown of the current `.eslintrc` and `.prettierrc` is provided later in this document.
 
 <a name="javascript-file-naming-and-organization"></a>
 
@@ -1116,8 +1138,8 @@ Representing the Logic layer of our Front-End Development, it’s important that
 
 Filenames should contain lowercase letters and words should be separated with a hyphen.
 
-- Within individual javascript files, organize sections of code by component element.
-- Use consistent white space to your advantage when separating sections of code for scanning larger documents.
+-   Within individual javascript files, organize sections of code by component element.
+-   Use consistent white space to your advantage when separating sections of code for scanning larger documents.
 
 <a name="javascript-comments"></a>
 
@@ -1333,10 +1355,10 @@ Most of the time you’ll find the extra functionality you need is because of ba
 
 > Good code does not trust any data that comes in.
 
-- Don’t believe the HTML document, any user can meddle with it for example in Firebug.
-- Don’t trust that data reaches your function is of the right format. Test with typeof and then do something with it.
-- Don’t expect elements in the DOM to be available. Test for them and that they indeed are what you expect them to be before altering them.
-- Never ever use JavaScript to protect something. JavaScript is as easy to crack as it is to code
+-   Don’t believe the HTML document, any user can meddle with it for example in Firebug.
+-   Don’t trust that data reaches your function is of the right format. Test with typeof and then do something with it.
+-   Don’t expect elements in the DOM to be available. Test for them and that they indeed are what you expect them to be before altering them.
+-   Never ever use JavaScript to protect something. JavaScript is as easy to crack as it is to code
 
 #### 9. Add Functionality with Javascript Not Content
 
@@ -1352,9 +1374,9 @@ That way you keep maintenance in HTML and allow for customization.
 
 Live code is written for machines. Development code is written for humans.
 
-- Collate, minify and optimize your code in a build process.
-- Don’t optimize prematurely and punish your fellow developers and those who have to take over from them.
-- If we cut down on the time spent coding we have more time to perfect the conversion to machine code.
+-   Collate, minify and optimize your code in a build process.
+-   Don’t optimize prematurely and punish your fellow developers and those who have to take over from them.
+-   If we cut down on the time spent coding we have more time to perfect the conversion to machine code.
 
 Learn more about Javascript best practices from, [Javascript best practices Part 1](https://www.thinkful.com/learn/javascript-best-practices-1/) and [Javascript best practices Part 2](https://www.thinkful.com/learn/javascript-best-practices-2/).
 
@@ -1456,11 +1478,11 @@ You can check out more on [Acronyms Every Developer Should Know](https://thefull
 
 Why bother testing your JavaScript?
 
-- When a user encounters a bug they look like this: 🤬
-- Bugs grind work to a halt.
-- Bugs cause financial harm.
-- Every single time a bug is encountered, user trust erodes.
-- Bugs are bad.
+-   When a user encounters a bug they look like this: 🤬
+-   Bugs grind work to a halt.
+-   Bugs cause financial harm.
+-   Every single time a bug is encountered, user trust erodes.
+-   Bugs are bad.
 
 And who gets blamed? You, the developer.
 
@@ -1500,11 +1522,11 @@ A custom `.eslintrc` file has been setup and included with this documentation to
 
 **Required Plugins**
 
-- eslint-config-airbnb
-- eslint-config-airbnb-base
-- eslint-plugin-import
-- eslint-plugin-jsx-a11y
-- eslint-plugin-react
+-   eslint-config-airbnb
+-   eslint-config-airbnb-base
+-   eslint-plugin-import
+-   eslint-plugin-jsx-a11y
+-   eslint-plugin-react
 
 **Add this configuration to your package.json file**
 
@@ -1521,29 +1543,67 @@ When your react app is processed, it will provide Warnings and Errors within the
 
 Most items will be flagged as a Warning, but a few items that will generate an Error include:
 
-- Disallow trailing commas
-- No linebreak
-- Do not require require() calls to be placed at top-level module scope
-- Do not flag usage of Function.prototype.apply()
-- Do not require parentheses around arrow function arguments
-- Disallow the use of console in production
-- No restricted syntax
-- Allow the unary operators
-- Enforce return statements in callbacks of array methods
-- Enforce the use of variables within the scope they are defined
-- Enforce consistent brace style for all control statements
-- Require the use of === and !==
-- Disallow the use of alert, confirm, and prompt in production
-- Disallow else blocks after return statements in if statements
-- Disallow empty functions
-- Disallow the use of variables before they are defined
-- Do not enforce that class methods utilize this
-- Allow nested ternary expressions
-- Disallow Unused Expressions
+-   Disallow trailing commas
+-   No linebreak
+-   Do not require require() calls to be placed at top-level module scope
+-   Do not flag usage of Function.prototype.apply()
+-   Do not require parentheses around arrow function arguments
+-   Disallow the use of console in production
+-   No restricted syntax
+-   Allow the unary operators
+-   Enforce return statements in callbacks of array methods
+-   Enforce the use of variables within the scope they are defined
+-   Enforce consistent brace style for all control statements
+-   Require the use of === and !==
+-   Disallow the use of alert, confirm, and prompt in production
+-   Disallow else blocks after return statements in if statements
+-   Disallow empty functions
+-   Disallow the use of variables before they are defined
+-   Do not enforce that class methods utilize this
+-   Allow nested ternary expressions
+-   Disallow Unused Expressions
 
 **All items (Warnings and Errors) should be addressed to be inline with Front-End Standards defined in this document.**
 
 A full breakdown of all available Rules in the ESLint linter are available with the [Documentation](https://eslint.org/docs/rules/).
+
+A custom `.prettierrc` file has been setup and included with this documentation to aid in the implementation of these standards. It requires the following plugins to run
+
+**Required Plugins**
+
+-   eslint-config-prettier
+-   husky
+-   lint-staged
+-   prettier
+-   prettierrc
+
+**Add this configuration to your package.json file**
+
+```
+"husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+},
+  "lint-staged": {
+    "*.{js,scss,css}": [
+      "prettier --write",
+      "git add"
+    ]
+}
+```
+
+To make sure prettier works well with eslint, you need to extend eslint by adding this line below if it doesn't exist in the `.eslintrc` file.
+
+```
+"extends": [
+    ...
+    "prettier",
+    "prettier/@typescript-eslint"
+]
+```
+
+For more information on how prettier works or compare with eslint, check the [Documentation](https://prettier.io/docs/en/comparison.html)
 
 <a name="git"></a>
 
@@ -1569,13 +1629,13 @@ Subject line contains succinct description of the change.
 
 #### Allowed `<type>`
 
-- feat (feature)
-- fix (bug fix)
-- docs (documentation)
-- style (formatting, missing semi colons, …)
-- refactor
-- test (when adding missing tests)
-- chore (maintain)
+-   feat (feature)
+-   fix (bug fix)
+-   docs (documentation)
+-   style (formatting, missing semi colons, …)
+-   refactor
+-   test (when adding missing tests)
+-   chore (maintain)
 
 #### Allowed `<scope>`
 
@@ -1583,9 +1643,9 @@ Scope could be anything specifying place of the commit change. For example $loca
 
 #### `<subject>` text
 
-- use imperative, present tense: “change” not “changed” nor “changes”
-- don't capitalize first letter
-- no dot (.) at the end
+-   use imperative, present tense: “change” not “changed” nor “changes”
+-   don't capitalize first letter
+-   no dot (.) at the end
 
 #### Message body
 
@@ -1603,13 +1663,13 @@ Closes #IR-308, #IR-245, #IN-992
 
 ### The seven rules of a great Git commit message
 
-- Separate subject from body with a blank line
-- Limit the subject to 50 characters.
-- Do not capitalize the subject line
-- Do not end the subject line with a period.
-- Use the imperative mood in the subject line
-- Wrap the body at 72 characters
-- Use the body to explain what and why vs how.
+-   Separate subject from body with a blank line
+-   Limit the subject to 50 characters.
+-   Do not capitalize the subject line
+-   Do not end the subject line with a period.
+-   Use the imperative mood in the subject line
+-   Wrap the body at 72 characters
+-   Use the body to explain what and why vs how.
 
 These rules are adopted from [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit).
 
@@ -1685,28 +1745,28 @@ An EditorConfig helps developers define and maintain consistent coding styles be
 
 A few items pre-set in the `.editorconfig` file:
 
-- `root = true`
-  - Says that this file represents the top-most .editorconfig file and settings here should be applied.
-- `[*]` denotes that the following settings will be applied to all files:
-  - `indent_style = space`
-    - Use a soft space character for indents.
-  - `indent_size = 4`
-    - A single indent is equal to 4 spaces.
-  - `end_of_line = lf`
-    - Unix-style line breaks.
-  - `charset = utf-8`
-    - Use the UTF-8 character set.
-  - `trim_trailing_whitespace = true`
-    - Removes any whitespace characters at the end of each line.
-  - `insert_final_newline = true`
-    - Adds a new, blank line to the end of our file.
-- `[*.md]` is specific to files with this extension
-  - `trim_trailing_whitespace = false`
-    - Do Not remove any trailing whitespace from lines.
-- The indent size used in the `package.json` file cannot be changed, so we have specific settings for this file type:
-  - `[{.travis.yml,package.json}]`
-  - `indent_size = 2`
-  - `indent_style = space`
+-   `root = true`
+    -   Says that this file represents the top-most .editorconfig file and settings here should be applied.
+-   `[*]` denotes that the following settings will be applied to all files:
+    -   `indent_style = space`
+        -   Use a soft space character for indents.
+    -   `indent_size = 4`
+        -   A single indent is equal to 4 spaces.
+    -   `end_of_line = lf`
+        -   Unix-style line breaks.
+    -   `charset = utf-8`
+        -   Use the UTF-8 character set.
+    -   `trim_trailing_whitespace = true`
+        -   Removes any whitespace characters at the end of each line.
+    -   `insert_final_newline = true`
+        -   Adds a new, blank line to the end of our file.
+-   `[*.md]` is specific to files with this extension
+    -   `trim_trailing_whitespace = false`
+        -   Do Not remove any trailing whitespace from lines.
+-   The indent size used in the `package.json` file cannot be changed, so we have specific settings for this file type:
+    -   `[{.travis.yml,package.json}]`
+    -   `indent_size = 2`
+    -   `indent_style = space`
 
 ```
 # .editorconfig helps developers define and maintain consistent coding
@@ -1743,17 +1803,17 @@ indent_style = space
 
 These Code Standards are the culmination of research into best practices as well as input from the Development team. Specifics are adapted from various sources, including:
 
-- [Front-End Guidelines](https://github.com/bendc/frontend-guidelines)
-- [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
-- [Code Guide](http://codeguide.co/)
-- [SASS Style Guide](https://css-tricks.com/sass-style-guide/)
-- [SASS Guidelines](https://sass-guidelin.es/)
-- [Airbnb Style Guide](http://airbnb.io/javascript/)
-- [Javascript Style Guide](http://snowdream.github.io/javascript-style-guide/javascript-style-guide/en/hoisting.html)
-- [Javascript Guidelines](https://eslint.org/docs/rules/)
-- [Automated Testing](https://testingjavascript.com/)
-- [Javascript Best Practices](https://www.slideshare.net/cheilmann/javascript-best-practices-1041724)
-- [Responsive Designs](https://teamtreehouse.com/library/using-a-mobile-first-approach)
+-   [Front-End Guidelines](https://github.com/bendc/frontend-guidelines)
+-   [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
+-   [Code Guide](http://codeguide.co/)
+-   [SASS Style Guide](https://css-tricks.com/sass-style-guide/)
+-   [SASS Guidelines](https://sass-guidelin.es/)
+-   [Airbnb Style Guide](http://airbnb.io/javascript/)
+-   [Javascript Style Guide](http://snowdream.github.io/javascript-style-guide/javascript-style-guide/en/hoisting.html)
+-   [Javascript Guidelines](https://eslint.org/docs/rules/)
+-   [Automated Testing](https://testingjavascript.com/)
+-   [Javascript Best Practices](https://www.slideshare.net/cheilmann/javascript-best-practices-1041724)
+-   [Responsive Designs](https://teamtreehouse.com/library/using-a-mobile-first-approach)
 
 <a name="tools"></a>
 
@@ -1773,6 +1833,6 @@ Will fix code to adhere to a predefined configuration file. The .csscomb file in
 
 #### IDE Plugins
 
-- [Atom CSScomb plugin](https://atom.io/packages/atom-css-comb)
-- [VS Code CSScomb plugin](https://github.com/mrmlnc/vscode-csscomb)
-- [Github Repo](https://github.com/csscomb/csscomb.js)
+-   [Atom CSScomb plugin](https://atom.io/packages/atom-css-comb)
+-   [VS Code CSScomb plugin](https://github.com/mrmlnc/vscode-csscomb)
+-   [Github Repo](https://github.com/csscomb/csscomb.js)
