@@ -392,6 +392,7 @@ There is no penalty to splitting into many small files. It’s much easier to ju
 
 // helpers
 @import 'helpers/utility';
+@import 'helpers/grid';
 ```
 
 Learn more about [SCSS Naming and Organization](https://scotch.io/tutorials/aesthetic-sass-1-architecture-and-style-organization)
