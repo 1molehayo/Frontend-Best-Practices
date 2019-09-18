@@ -2,6 +2,9 @@
     "folders": [
         {
             "path": "."
+        },
+        {
+            "path": "/Users/mac/Desktop/onemole/workfiles/Frontend Best practices/react-boilerplate"
         }
     ]
 }

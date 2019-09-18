@@ -362,13 +362,17 @@ Each folder should have a single .scss partial file that collects the other file
 There is no penalty to splitting into many small files. It’s much easier to jump to small specific files and navigate through them than fewer/larger ones.
 
 ```css
+// global
+@import 'helpers/functions';
+@import 'helpers/variables';
+
 // base
 @import 'base/resets';
 @import 'base/typography';
 
-// helpers
-@import 'helpers/functions';
-@import 'helpers/mixins';
+// vendors
+@import 'vendors/bootstrap/bootstrap';
+@import 'vendors/slick/slick';
 
 // components
 @import 'components/button';
@@ -386,8 +390,8 @@ There is no penalty to splitting into many small files. It’s much easier to ju
 @import 'themes/default';
 @import 'themes/dark-mode';
 
-// vendors
-@import 'vendors/bootstrap/bootstrap';
+// helpers
+@import 'helpers/utility';
 ```
 
 Learn more about [SCSS Naming and Organization](https://scotch.io/tutorials/aesthetic-sass-1-architecture-and-style-organization)
