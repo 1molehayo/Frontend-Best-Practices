@@ -1237,11 +1237,7 @@ module = function(){
 module.init();
 ```
 
-#### 3. Stick to a Strict Coding Style
-
-Summitech uses [ESLint Airbnb](http://airbnb.io/javascript/).
-
-#### 4. Use Shortcut Notations
+#### 3. Use Shortcut Notations
 
 Shortcut notations keep your code snappy and easier to read once you get used to it.
 
@@ -1279,7 +1275,7 @@ if(x > 100){
 var direction = (x > 100) ? 1 : -1;
 ```
 
-#### 5. Modularize
+#### 4. Modularize
 
 > Keep your code modularized and specialized.
 
@@ -1291,7 +1287,7 @@ At a later stage you can also expose these functions when using the revealing mo
 
 Good code should be easy to build upon without rewriting the core.
 
-#### 6. Avoid Heavy Nesting
+#### 5. Avoid Heavy Nesting
 
 Code gets unreadable after a certain level of nesting.
 
@@ -1348,14 +1344,14 @@ function addMemberData(member){
 }
 ```
 
-#### 7. Don’t Yield to Browser Whims
+#### 6. Don’t Yield to Browser Whims
 
 Instead of relying on flaky browser behavior and hoping it works across the board...
 
 Avoid hacking around and analyze the problem in detail instead.
 Most of the time you’ll find the extra functionality you need is because of bad planning of your interface.
 
-#### 8. Don’t Trust Any Data
+#### 7. Don’t Trust Any Data
 
 > Good code does not trust any data that comes in.
 
@@ -1364,7 +1360,7 @@ Most of the time you’ll find the extra functionality you need is because of ba
 - Don’t expect elements in the DOM to be available. Test for them and that they indeed are what you expect them to be before altering them.
 - Never ever use JavaScript to protect something. JavaScript is as easy to crack as it is to code
 
-#### 9. Add Functionality with Javascript Not Content
+#### 8. Add Functionality with Javascript Not Content
 
 If you find yourself creating lots and lots of HTML in JavaScript, you might be doing something wrong.
 
@@ -1374,7 +1370,7 @@ If you really have a massive interface that should only be available when JavaSc
 
 That way you keep maintenance in HTML and allow for customization.
 
-#### 10. Development Code is Not Live Code
+#### 9. Development Code is Not Live Code
 
 Live code is written for machines. Development code is written for humans.
 
@@ -1526,8 +1522,6 @@ A custom `.eslintrc` file has been setup and included with this documentation to
 
 **Required Plugins**
 
-- eslint-config-airbnb
-- eslint-config-airbnb-base
 - eslint-plugin-import
 - eslint-plugin-jsx-a11y
 - eslint-plugin-react
@@ -1812,7 +1806,6 @@ These Code Standards are the culmination of research into best practices as well
 - [Code Guide](http://codeguide.co/)
 - [SASS Style Guide](https://css-tricks.com/sass-style-guide/)
 - [SASS Guidelines](https://sass-guidelin.es/)
-- [Airbnb Style Guide](http://airbnb.io/javascript/)
 - [Javascript Style Guide](http://snowdream.github.io/javascript-style-guide/javascript-style-guide/en/hoisting.html)
 - [Javascript Guidelines](https://eslint.org/docs/rules/)
 - [Automated Testing](https://testingjavascript.com/)
