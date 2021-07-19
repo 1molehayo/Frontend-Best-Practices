@@ -1,4 +1,4 @@
-# Front-End Coding Standards (HTML, CSS & Javascript) For Summitech
+# Front-End Coding Standards (HTML, CSS & Javascript) For [Summitech Computing Ltd](https://summitech.ng)
 
 The following document outlines a reasonable style guide for CSS and JavaScript development. These guidelines strongly encourage the use of existing, common, sensible patterns. They can be adapted by the staffs as needed to create their own style guide.
 
