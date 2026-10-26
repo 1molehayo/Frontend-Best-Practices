@@ -15,4 +15,4 @@ The site runs at <http://localhost:5173>. The published copy is at <https://1mol
 
 ## Copy into a project
 
-Shared config lives in [`examples/`](examples/). Copy the files the project actually needs. The [Tooling](docs/tooling.md) page says which ones.
+Shared config lives in [`examples/`](examples/). The [Tooling](docs/tooling.md) page says which files to copy for a new project and which to keep on an existing one. The worked example is Harbor.

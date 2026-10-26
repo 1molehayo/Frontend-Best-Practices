@@ -36,4 +36,4 @@ Tailwind generates a utility only when the full class name appears in a scanned 
 
 Class names you still write follow the [CSS](/css) page. State is still `is-open` or `data-state`. Do not style by `id`. Do not add `!important` to win a conflict. Fix the layer or the source order.
 
-In a Tailwind project, add `prettier-plugin-tailwindcss` so class lists stay in one order and reviews do not reshuffle them. The [Tooling](/tooling) page has the line to add.
+Class lists stay in one order. A Prettier project adds `prettier-plugin-tailwindcss`. A Biome project enables `useTailwindSortedClasses`. The [Tooling](/tooling) page has both.

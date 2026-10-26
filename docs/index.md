@@ -23,6 +23,7 @@ The other pages are those two rules applied to HTML, CSS, JavaScript, tests, and
 
 - Write for the next person who will edit the file.
 - Stay with the stack the project already uses. We have Sass projects and Tailwind projects. We have TypeScript projects and JavaScript projects. A second styling system or a second language dialect does not belong in the same codebase.
+- A new project starts from the Harbor example on the [Tooling](/tooling) page. An existing project keeps the formatter and the Node major it already has. mise and nvm are both fine. The pin files are what matter.
 - Leave minification, prefixes, and unused code removal to the build. Source stays readable.
 - Comment the reason when a reader cannot get it from the code. A comment that repeats the line under it should be deleted.
 
