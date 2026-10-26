@@ -16,6 +16,8 @@ Test branched logic and user flows. A coverage number on its own says little.
 
 Use the runner the repository already has. A new project uses Vitest when the bundler is Vite, and Jest when the repo is already on Jest. Do not add both.
 
+How these layers differ, and how many of each to write, is the testing trophy in [Testing JavaScript](https://www.testingjavascript.com/). Static checks (types and lint) sit under the tests. Component tests, written the way a user drives the UI, carry more of the suite than isolated units. A few browser tests cover the flows that have to work.
+
 ## Playwright
 
 Playwright is how we write browser tests. Install, configuration, UI mode, codegen, traces, and CI are documented in the [automated tests guide](https://foundations.significa.co/guides/automated-tests). Follow that guide. The rules below are what review checks.

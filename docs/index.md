@@ -35,7 +35,7 @@ React components use PascalCase: `OrderSummary.tsx`.
 
 ## Later
 
-The coding-style rules in the public guides are already here. [Google's HTML and CSS guide](https://google.github.io/styleguide/htmlcssguide.html) and [Airbnb's JavaScript guide](https://github.com/airbnb/javascript) are formatting, naming, and language rules. Google's JavaScript guide is frozen and points to TypeScript, which we already choose per project. Twitter does not publish a current frontend guide. The older one from that company is [Code Guide](https://codeguide.co/), and the HTML and CSS pages follow that shape.
+The coding-style rules in the public guides are already here. The full list is on [References](/references). [Google's HTML and CSS guide](https://google.github.io/styleguide/htmlcssguide.html) and [Airbnb's JavaScript guide](https://github.com/airbnb/javascript) are formatting, naming, and language rules. Google's JavaScript guide is frozen and points to TypeScript, which we already choose per project. Twitter does not publish a current frontend guide. The older one from that company is [Code Guide](https://codeguide.co/), and the HTML and CSS pages follow that shape.
 
 What those companies publish beside the style guide, we do not cover yet. Microsoft's [Fluent accessibility guidance](https://fluent2.microsoft.design/accessibility) is the clearest gap: WCAG AA, keyboard use, and contrast, as a standard of its own. The HTML page only has the basics.
 

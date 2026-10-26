@@ -23,7 +23,8 @@ export default defineConfig({
           { text: 'JavaScript and TypeScript', link: '/javascript' },
           { text: 'Testing', link: '/testing' },
           { text: 'Git', link: '/git' },
-          { text: 'Tooling', link: '/tooling' }
+          { text: 'Tooling', link: '/tooling' },
+          { text: 'References', link: '/references' }
         ]
       }
     ]
