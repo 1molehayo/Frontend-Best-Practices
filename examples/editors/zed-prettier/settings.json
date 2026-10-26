@@ -1,0 +1,78 @@
+{
+  "languages": {
+    "JavaScript": {
+      "format_on_save": "on",
+      "tab_size": 2,
+      "formatter": [
+        { "code_action": "source.organizeImports" },
+        { "code_action": "source.fixAll.eslint" },
+        {
+          "external": {
+            "command": "prettier",
+            "arguments": ["--stdin-filepath", "{buffer_path}"]
+          }
+        }
+      ]
+    },
+    "JSX": {
+      "format_on_save": "on",
+      "tab_size": 2,
+      "formatter": [
+        { "code_action": "source.organizeImports" },
+        { "code_action": "source.fixAll.eslint" },
+        {
+          "external": {
+            "command": "prettier",
+            "arguments": ["--stdin-filepath", "{buffer_path}"]
+          }
+        }
+      ]
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "tab_size": 2,
+      "formatter": [
+        { "code_action": "source.organizeImports" },
+        { "code_action": "source.fixAll.eslint" },
+        {
+          "external": {
+            "command": "prettier",
+            "arguments": ["--stdin-filepath", "{buffer_path}"]
+          }
+        }
+      ]
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "tab_size": 2,
+      "formatter": [
+        { "code_action": "source.organizeImports" },
+        { "code_action": "source.fixAll.eslint" },
+        {
+          "external": {
+            "command": "prettier",
+            "arguments": ["--stdin-filepath", "{buffer_path}"]
+          }
+        }
+      ]
+    },
+    "JSON": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    },
+    "CSS": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    }
+  }
+}
