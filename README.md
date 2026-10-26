@@ -29,3 +29,7 @@ Open <http://localhost:4173>.
 `examples/` is the shared config: the formatter, the editor settings, and the Node pin. Copy that set into the project.
 
 The [Tooling](https://1molehayo.github.io/Frontend-Best-Practices/tooling) page explains which files a new project takes and which an existing project keeps.
+
+## License
+
+[MIT](LICENSE). The guide and the examples can be copied into a project, including a private one. Keep the copyright line with the copy.
