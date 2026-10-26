@@ -1,8 +1,9 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Frontend conventions',
-  description: 'Coding conventions for the frontend team.',
+  title: 'Front-End Coding Standards',
+  description:
+    'Conventions for HTML, CSS, Sass, Tailwind, JavaScript, TypeScript, testing, Git, and tooling.',
   lang: 'en-US',
   // Project pages are served at /<repo>/. Local dev stays at /.
   base: process.env.GITHUB_ACTIONS ? '/Frontend-Best-Practices/' : '/',

@@ -1,6 +1,6 @@
-# Frontend conventions
+# Front-End Coding Standards
 
-Coding conventions for the frontend team. A project should read as if one person wrote it.
+Conventions for HTML, CSS, Sass, Tailwind, JavaScript, TypeScript, testing, Git, and tooling. A project should read as if one person wrote it.
 
 Sass or Tailwind, and TypeScript or JavaScript, depending on the project. The rules underneath those choices are KISS and DRY, on the first page of the guide.
 
