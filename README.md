@@ -6,13 +6,26 @@ Sass or Tailwind, and TypeScript or JavaScript, depending on the project. The ru
 
 ## Read the guide
 
+Use Node 24. From this directory, `nvm use` or `mise install` selects it.
+
 ```bash
 pnpm install
 pnpm docs:dev
 ```
 
-The site runs at <http://localhost:5173>. The published copy is at <https://1molehayo.github.io/Frontend-Best-Practices/>.
+The dev server reloads when a file changes. Open <http://localhost:5173>.
+
+Preview the built site:
+
+```bash
+pnpm docs:build
+pnpm docs:preview
+```
+
+Open <http://localhost:4173>.
 
 ## Copy into a project
 
-Shared config lives in [`examples/`](examples/). The [Tooling](docs/tooling.md) page says which files to copy for a new project and which to keep on an existing one. The worked example is Harbor.
+`examples/` is the shared config: the formatter, the editor settings, and the Node pin. Copy that set into the project.
+
+The [Tooling](https://1molehayo.github.io/Frontend-Best-Practices/tooling) page explains which files a new project takes and which an existing project keeps.
